@@ -1,0 +1,2304 @@
+input[type="radio"] {
+	-webkit-appearance:radio;
+}
+
+@media (max-width: 1025px) {	/* big tablets landscape */
+
+	body{
+		/*For iOS7 toolbar tint*/
+		background-color: #f31b0f;
+	}
+
+	html {
+		font-size: 40%;
+		/* font-size: 52.5%; */
+	}
+	
+	#calculator{
+		/*Half the html font size*/
+	}
+
+	#background {
+		width:100%;
+		height: 100%;
+		background-size:43px 1020px;
+	}
+
+	.normalbutton {
+		width: 100px;
+	}
+
+	.normalbutton a, .normalbutton input[type="submit"] {
+		height: 30px;
+		line-height: 175%;
+		border-radius:5px;
+	}
+	
+	input[type="submit"] {
+		min-width:80px;
+	}
+	
+	#introcontainer {
+		width:340px;
+		height:260px;
+		margin-left: -400px;
+		margin-top: -250px;
+	}
+
+	#introtextcontainer {
+		float:right;
+		margin-right: -100px;
+		width:380px;
+	}
+
+	h1{
+
+	}
+	
+	#home #maintext {
+	}
+
+	#home #startbutton {
+		margin-top: -8px;
+	}
+
+	#home #logintitle {
+		
+	}
+
+	#home #loginbutton {
+		
+	}
+	
+	
+	.bgelement {
+		background-size:75% 75%;
+	}
+	
+	#home  #bush {
+		left: -930px;
+		top: -18px;
+		background-size:75% 75%;
+	}
+
+	#home  #character {
+		background-size:75% 75%;
+		left: 45px;
+		top: -110px;
+	}
+
+	#home  #sign {
+		background-size:75% 75%;
+		left: 175px;
+		top: -50px;
+	}
+	
+	#tree {
+		background-size:75% 75%;
+		left: 215px;
+		top: -320px;
+		z-index:0;
+	}
+	
+	#home #webappprompt {
+		position:absolute;
+		bottom:80px;
+		left:50%;
+		margin-left:-150px;
+		background:url(/img/prompt-sign.png) no-repeat top left;
+		background-size:cover;
+		width:300px;
+		height:187px;
+		padding:20px 0 0 20px;
+	}
+	
+	#home #webappprompt #closeprompt {
+		position:absolute;
+		top:23px;
+		right:12px;
+	}
+	
+	#home #webappprompt p {
+		font-size:1.4rem;
+		line-height:2.2rem;
+		color:#ffffff;
+		padding-right:20px;
+		margin-top:20px;
+	}
+	
+	#home #webappprompt p span img {
+		width:15px;
+		height:auto;
+		display:inline-block;
+	}
+	
+	#billboard, #marketstall {
+		background-size: cover;
+		width: 566px;
+		height: 365px;
+		margin-top:-192px;
+		margin-left:-360px;
+		padding-left:30px;
+		padding-right:40px;
+	}
+
+	#billboard #nextbutton {
+		position: absolute;
+		right:30px;
+		bottom:90px;
+	}
+	
+	#reset #billboard #nextbutton {
+		width:130px;
+	}
+
+	#billboard #continuebutton {
+		width:70px; 
+		height: 16px;
+		right:170px;
+		bottom:90px;
+	}
+	
+	#reset #billboard #continuebutton {
+		right:170px;
+	}
+	
+	#billboard #backbutton {
+		width:55px; 
+		height: 16px;
+		left:42px;
+		bottom:90px;
+	}
+	
+	#billboard h1, #billboard h1 span {
+		font-size:6rem;
+	}
+	
+	#content #menu.data h1 {
+		max-height:70px;
+	}
+
+	#backbutton img {
+		margin-top:-1px;
+	}
+	
+	#billboardbush {
+		background-size:50% 50%;
+		left: -650px;
+		top: -22px;
+	}
+	
+	input, select {
+		-webkit-appearance: none;
+	}
+
+	#user form #fields, #login form #fields, #signup form #fields, #question form #fields, #forgot form #fields, #reset form #fields  {
+		width: 400px;
+		height: 156px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -200px;
+		margin-top: -58px;
+	}
+
+	#secret form #error{
+		top: 90px;
+		left: 285px;		
+	}
+
+	#question-form #fields {
+		width:auto;
+		max-width: 590px;
+		height: 156px;
+		position: static;
+		margin: 0 auto;
+		margin-top: 55px;
+	}
+
+	#user form #error {
+		left:285px;
+		top:110px;
+	}
+	
+	#user form .grid2col {
+		height:35px;
+	}
+
+	.grid2col .column.label {
+		padding-top:5px;
+	}
+	
+	.inputbox {
+		height: 30px;
+	}
+
+	form #error {
+		position:absolute;
+		top:45px;
+		left:295px;
+	}
+	
+	#character #accessories .grid3col {
+		height:auto;
+	}
+	
+	#character #accessories .grid3col .column label img {
+		height:24px;
+		width:24px;
+	}
+	
+	#character #accessories .grid3col .column.first img, #character #accessories .grid3col .column.last img {
+		width:10px;
+	}
+	
+	#login form #fields {
+		width: 400px;
+		margin-left: -180px;
+		margin-top: -58px;
+	}
+
+	#goalscontainer {
+		width: 420px;
+		height: 222px;
+		margin-left: -280px;
+		margin-top: 10px;
+	}
+	
+	#goalscontainer p {
+		font-size:1.5rem;
+		line-height:1.5rem;
+	}
+	
+	#goals #billboard .goal {
+		width:115px;
+	}
+	
+	.goal img {
+		width:100%;
+		height:auto;
+	}
+	
+	.goal.active a {
+		width:115px;
+		height:53px;
+	}
+	
+	.goal.active a img {
+		width:55px;
+		height:55px;
+		top:-3px;
+		left:28px;
+	}
+	
+	#goal-setup #goals-form-container {
+		margin-top:8px
+	}
+	
+	#goal-setup .column label {
+		height:25px;
+		width:90%;
+	}
+	
+	#goal-setup .grid2col .column span.numberpound {
+		top:2px;
+	}
+	
+	#goal-setup .grid3col .column label img {
+		width:40px;
+		height:40px;
+	}
+	
+	#goal-setup .column input, #goal-setup .column span {
+		line-height:15px;
+	}
+	
+	#goal-setup #goals-form-container p {
+		margin:5px 0;
+	}
+	
+	#goal-setup .grid3col {
+		height:39px;
+	}
+	
+	#goal-setup .grid3col .column label {
+		height:40px;
+	}
+	
+	#goal-setup .grid3col .column.first img, #goal-setup .grid3col .column.last img {
+		width:10px;
+		height:25px;
+	}
+	
+	#goal-setup .grid3col .column img {
+		width:35px;
+		height:35px;
+		margin:0 13px;
+	}
+
+	#goal-setup form #error {
+		top:90px;
+	}
+	
+	#signup label.insidelabel, #login label.insidelabel {
+		width:95%;
+	}
+
+	#signup form #error {
+		top:85px;
+		left:285px;
+	}
+	
+	#login form #error {
+		top:105px;
+		left:305px;
+	}
+	
+	#menu-buttons a {
+		max-width:225px;
+	}
+	
+	#calculator-body #bush {
+		left: -600px;
+		top: -10px;
+		background-size:50% 50%;
+	}
+	
+	#calculator-body #bush2 {
+		left: 100px;
+		top: 0px;
+		background-size:50% 50%;
+	}
+	
+	#calculator #sun {
+		background-size:50% 50%;
+		right: -230px;
+		top: -230px;
+	}
+	
+	#calculator-wrapper {
+		width:100%;
+		height:100%;
+	}
+	
+	#calculator #play-sign {
+		bottom: -90px;
+		left: 20px;
+	}
+	
+	#calculator #play-sign .no-ajaxy {
+		top:20px;
+		right:60px;
+	}
+	
+	#calculator #play-sign img {
+		width:70%;
+		height:auto;
+	}
+	
+	#calculator #play-sign .no-ajaxy img {
+		width:100%;
+	}
+	
+	#calculator #machine {
+		width:60%;
+		height:70%;
+		position:absolute;
+		bottom: 0%;
+		left:10%;
+	}
+	
+	#machine-base{
+	}
+
+	#machine-tank{
+	}
+	
+	#machine-tank-middle{
+	}
+
+	#machine-tank-cover{
+	}
+
+	.tankcoins {
+		max-height: 221px;
+	}
+	
+	#sliders-container .grid2col {
+	}
+
+	.slider-hint-button {
+	}
+
+	.slider-hint-button-deselected {
+	}
+
+	.slider-hint-button-selected {
+		margin-left: 2%;
+		background-size:70%;
+	}
+
+	.slider-hint-button-selected-top {
+		margin-left: 2%;
+		background-size:70%;
+	}
+
+	.slider-hint-button-selected-middle {
+		margin-left: 2%;
+		background-size:70%;
+	}
+
+	.slider-hint-button-selected-bottom {
+		margin-left: 2%;
+		background-size:70%;
+	}
+
+	.slider-hint-button a {
+		font-size: 1.3rem;
+		line-height:2.5rem;
+	}
+
+	.slider-hint-button-selected-top a, .slider-hint-button-selected-middle a, .slider-hint-button-selected-bottom a{
+		
+	}
+	
+	#slider-help-panel p {
+		font-size: 1.5rem;
+	}
+	
+	#slider-help-panel {
+	}
+	
+	/*SLIDERS*/
+
+	#sliders-container{
+	}
+	
+	#sliders-container .column {
+	}
+	
+	#sliders-container .column.last {
+	}
+	
+	#sliders-container .slider-container.grid3col .column {
+	}
+
+	#sliders-container .slider-container.grid3col .column.button {
+	}
+
+	#sliders-container .slider-container.grid3col .column.button a {
+	}
+	
+	#sliders-container .slider-container.grid3col .column.button a img {
+	}
+
+	.slider-container{
+	}
+
+	.slider{
+	}
+
+	.slider-container a {
+	}
+
+	.price-range-both.value {
+	}
+
+	.slider-joint{
+	}
+	
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+
+	}
+
+	/*END SLIDERS*/
+
+
+	#machine-goals {
+	}
+
+	#machine-goals .goal {
+	}
+	
+	#middle-cog{
+	}
+
+	#right-cog{
+	}
+
+	#total-interest {
+	}
+
+	#total-interest span {
+	}
+	
+	#interest-container {
+
+	}
+
+	#interest-rates {
+	}
+
+
+	#interest-rates span {
+	}
+
+	
+	#interest-label{
+
+	}
+	
+	/*?*/
+	#interest-value{
+		height:27px;
+		width:84px;
+	}
+
+	#interest-value p, #interest-value p span{
+		font-size: 18px;
+		line-height: 21px;
+		padding-bottom: 11px;
+	}
+
+	#interest-value p{
+		font-size: 11px;
+	}
+	
+	#total-container {
+	}
+
+	#total-label {
+	}
+
+	#total-label span{
+		font-size: 3.5rem;
+	}
+
+	#total-label p{
+		font-size: 3.5rem;
+	}
+
+	#total-container #byage  p{
+		font-size: 1.7rem;
+	}
+	
+	#total-container #age {
+	}
+	
+	#total-container #age p {
+		font-size: 3rem;
+		letter-spacing: 1px;
+	}
+
+	#total-container #age-fraction {
+	}
+
+	#age-fraction p {
+		font-size: 2.5rem;
+	}
+	
+	#total-container #years {
+	}
+
+	#total-container #years p, #total-container #total-title p {
+		font-size: 1.6rem;
+	}
+	
+	#side-buttons {
+	}
+			
+	.side-button  a {
+		display:block;
+	}
+	
+	#button-menu {
+	}
+
+	#button-tips {
+	}
+	
+	#button-help {
+	}
+	
+	/*START MEASURE*/
+
+	#tape-holder{
+		width:105px;
+		height:80px;
+	}
+	
+	#tape-holder-cover {
+		width:76px;
+	}
+
+	#tape-drag {
+		width:34px;
+		height:150px;
+		left: 52px;
+	}
+	
+	#tape-measure{
+		position: absolute;
+		bottom: 0%;
+		left: 68%;
+	}
+	
+	#tapeContainer {
+		height:244px;
+		width:70px;
+		display:block;
+		bottom:80px;
+	}
+	
+	#tape{
+		background-size: 70%;
+		width:34px;
+		max-height:245px;
+		margin-left: 0px;
+		height:140px; /* modify this to stretch it */
+		min-height:140px;
+		left:52px;
+	}
+	
+	#tape-age-title {
+	}
+
+	#tape-age {
+		letter-spacing: -2px;
+	}
+
+	#tape-age  p{
+		font-size: 2.8rem;
+	}
+
+	#tape-age-fraction{
+	}	
+	
+	#tape-holder-cover {
+	}
+	
+	#tape-holder-cog{
+		background-size:66%;
+		width:66px;
+		height:66px;
+		margin-top: 7px;
+		margin-left: 11px;
+	}
+
+	#tape-holder{	
+	}
+
+	/* END MEASURE*/
+	
+	/* GLOSSARY */
+	
+	#glossary {
+		width:40%;
+	}
+	
+	#glossary-terms .item img.icon {
+		width:35px;
+		height:auto;
+	}
+
+	#glossary-terms .item img.icon {
+		top: 20px;
+	}
+	
+	#glossary-terms .item .title a h4 {
+		font-size:3.5rem;
+	}
+
+	#glossary-terms .item .description p {
+		font-size: 3rem;
+		line-height: 3rem;
+	}
+	
+	/* END GLOSSARY */
+	
+	/* HELP */
+	
+	#help #help-content ol li {
+		background-size:9%;
+		padding-top:17px;
+		padding-left:60px;
+		min-height:50px;
+	}
+	
+	/* END HELP */
+
+
+	/* FORGOT PAGE */
+
+
+
+	#forgot form #fields{
+		margin-top: -90px;
+	}
+
+	#forgot form .grid2col {
+		height: 40px;
+	}
+
+	#forgot #question-section {
+		margin-top: 35px;
+	}
+
+	#forgot #get-question {
+		float: right;
+		width: 80px;
+	}
+
+	/* END FORGOT PAGE */
+
+	/* CHARACTER PAGE */
+
+	#character #fields {
+		width:75%;
+		margin-left:25%;
+	}
+	/* END CHARACTER PAGE*/
+		/*CHARACTER*/
+
+		/*.character div{
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+	}*/
+
+
+	.character {
+		width:-webkit-calc(185px * 0.7);
+		height:-webkit-calc(450px * 0.7);
+		width: calc(185px * 0.7);
+		height: calc(450px * 0.7);
+	}
+
+	#calculator .character{
+	}
+
+	#character .character{
+		position: relative;
+		margin: -55px auto 0 5px;
+	}
+
+	.hair{
+		height: -webkit-calc(115px * 0.7);
+		height: calc(115px * 0.7);
+	}
+
+	.hair-front{
+		width:-webkit-calc(180px * 0.7);
+		height:-webkit-calc(115px * 0.7);
+		width: calc(180px * 0.7);
+		height: calc(115px * 0.7);
+		left: -webkit-calc(-5px * 0.7);
+		left: calc(-5px * 0.7);
+	}
+
+	.hair-back{
+		width:-webkit-calc(142px * 0.7);
+		height:-webkit-calc(171px * 0.7);
+		width: calc(142px * 0.7);
+		height: calc(171px * 0.7);
+	}
+
+
+	.ear{
+		width:-webkit-calc(25px * 0.7);
+		height:-webkit-calc(41px * 0.7);
+		width: calc(25px * 0.7);
+		height: calc(41px * 0.7);
+
+	}
+
+	.ear-left{
+	}
+
+	.ear-right{
+	}
+
+	.head{
+		width:-webkit-calc(135px * 0.7);
+		height:-webkit-calc(135px * 0.7);
+		width: calc(135px * 0.7);
+		height: calc(135px * 0.7);
+	}
+
+	.eye{
+		width:-webkit-calc(40px * 0.7);
+		height:-webkit-calc(41px * 0.7);
+		width: calc(40px * 0.7);
+		height: calc(41px * 0.7);
+	}
+
+	div.eye:nth-of-type(2){
+	}
+
+	.eyebrow-left{
+		width:-webkit-calc(45px * 0.7);
+		height:-webkit-calc(22px * 0.7);
+		width: calc(45px * 0.7);
+		height: calc(22px * 0.7);
+	}
+
+	.eyebrow-right{
+		width:-webkit-calc(45px * 0.7);
+		height:-webkit-calc(22px * 0.7);
+		width: calc(45px * 0.7);
+		height: calc(22px * 0.7);
+	}
+
+	.nose{
+		width:-webkit-calc(19px * 0.7);
+		height:-webkit-calc(9px * 0.7);
+		width: calc(19px * 0.7);
+		height: calc(9px * 0.7);
+		margin-top: -webkit-calc(80px * 0.7);
+		margin-top: calc(80px * 0.7);
+	}
+
+	.mouth{
+		width:-webkit-calc(107px * 0.7);
+		height:-webkit-calc(48px * 0.7);
+		width: calc(107px * 0.7);
+		height: calc(48px * 0.7);
+	}
+
+	.neck{
+		width:-webkit-calc(30px * 0.7);
+		height:-webkit-calc(15px * 0.7);
+		width: calc(30px * 0.7);
+		height: calc(15px * 0.7);
+	}
+
+	.shirt{
+		width:-webkit-calc(105px * 0.7);
+		height:-webkit-calc(84px * 0.7);
+		width: calc(105px * 0.7);
+		height: calc(84px * 0.7);
+		margin-bottom: -webkit-calc(-4px * 0.7);
+		margin-bottom: calc(-4px * 0.7);
+	}
+
+	.shirt-top{
+		height:-webkit-calc(28px * 0.7);
+		height: calc(28px * 0.7);
+	}
+
+	.shirt-bottom{
+		height:-webkit-calc(56px * 0.7);
+		height: calc(56px * 0.7);
+		top: -webkit-calc(28px * 0.7);
+		top: calc(28px * 0.7);
+	}
+
+
+	.shirt-logo{
+		width:-webkit-calc(40px * 0.7);
+		height:-webkit-calc(38px * 0.7);
+		width: calc(40px * 0.7);
+		height: calc(38px * 0.7);
+	}
+
+	.arm{
+		width:-webkit-calc(52px * 0.7);
+		height:-webkit-calc(90px * 0.7);
+		width: calc(52px * 0.7);
+		height: calc(90px * 0.7);
+	}
+
+	.arm-right{
+	}
+
+	.arm-left{
+
+	}
+
+	.hand{
+		width:-webkit-calc(42px * 0.7);
+		height:-webkit-calc(35px * 0.7);
+		width: calc(42px * 0.7);
+		height: calc(35px * 0.7);
+	}
+
+	.hand-right{
+	}
+
+	.hand-left{
+	}
+
+	.char-bottom div{	
+
+	}
+
+	.fixed-char-top {
+		height: -webkit-calc(215px * 0.7);
+		height: calc(215px * 0.7);
+	}
+
+	.char-top-wrapper{
+		height:-webkit-calc(350px * 0.7);
+		height: calc(350px * 0.7);
+	}
+
+	.char-top{
+		height: -webkit-calc(215px * 0.7);
+		height: calc(215px * 0.7);
+	}
+
+	.char-bottom{
+		height: -webkit-calc(200px * 0.7);
+		height: calc(200px * 0.7);
+	}
+
+
+
+	.legs{
+	}
+
+	.legs-top{
+		width:-webkit-calc(75px * 0.7);
+		height:-webkit-calc(35px * 0.7);
+		width: calc(75px * 0.7);
+		height: calc(35px * 0.7);
+	}
+
+	.leg-left, .leg-right{
+		height:-webkit-calc(200px * 0.7);
+		width:-webkit-calc(18px * 0.7);
+		height: calc(200px * 0.7);
+		width: calc(18px * 0.7);
+	}
+
+	.leg-left{
+
+	}
+
+	.leg-right{
+
+	}
+
+	.shoes{
+
+	}
+
+	.shoes-left{
+		width:-webkit-calc(70px * 0.7);
+		height: -webkit-calc(25px * 0.7);
+		width: calc(70px * 0.7);
+		height: calc(25px * 0.7);
+	}
+
+	.shoes-right{
+		width:-webkit-calc(70px * 0.7);
+		height: -webkit-calc(25px * 0.7);
+		width: calc(70px * 0.7);
+		height: calc(25px * 0.7);
+	}
+
+
+	.trouser-leg{
+		height:-webkit-calc(200px * 0.7);
+		width:-webkit-calc(35px * 0.7);
+		left:-webkit-calc(-8px * 0.7);
+		height:calc(200px * 0.7);
+		width:calc(35px * 0.7);
+		left:calc(-8px * 0.7);
+	}
+
+	/*accessories*/
+	
+	.accessory {
+		width:-webkit-calc(188px * 0.7);
+		height: -webkit-calc(238px * 0.7);
+		width: calc(188px * 0.7);
+		height: calc(238px * 0.7);
+	}
+
+	.acces-top{
+		width:-webkit-calc(188px * 0.7);
+		height: -webkit-calc(162px * 0.7);
+		width: calc(188px * 0.7);
+		height: calc(162px * 0.7);
+	}
+
+	.acces-top-hat{
+	}
+
+	.acces-top-bunny{
+	}
+	.acces-glasses{
+		width: -webkit-calc(155px * 0.7);
+		height: -webkit-calc(64px * 0.7);
+		width: calc(155px * 0.7);
+		height: calc(64px * 0.7);
+		left: -webkit-calc(-10px * 0.7);
+		left: calc(-10px * 0.7);
+	}
+
+	.acces-glasses-sun{
+	}
+
+	.acces-glasses-bar{
+	}
+
+	.acces-mouth{
+		width: -webkit-calc(86px * 0.7);
+		height: -webkit-calc(28px * 0.7);
+		width: calc(86px * 0.7);
+		height: calc(28px * 0.7);
+	}
+
+	.acces-mouth-mustache{
+	}
+
+	/*SKINS AND FACES OF CHARACTER (NON-GENDER)*/
+
+	.trouser-1{
+
+	}
+
+	.trouser-2{
+		height: -webkit-calc(200px * 0.7);
+		width: -webkit-calc(35px * 0.7);
+		left: -webkit-calc(-8px * 0.7);
+		height: calc(200px * 0.7);
+		width: calc(35px * 0.7);
+		left: calc(-8px * 0.7);
+	}
+
+	.trouser-3{
+		height: -webkit-calc(150px * 0.7);
+		width: -webkit-calc(35px * 0.7);
+		left: -webkit-calc(-8px * 0.7);
+		height:calc(150px * 0.7);
+		width:calc(35px * 0.7);
+		left:calc(-8px * 0.7);
+	}
+
+	.trouser-4{
+		height: -webkit-calc(150px * 0.7);
+		width: -webkit-calc(35px * 0.7);
+		left: -webkit-calc(-8px * 0.7);
+		height:calc(150px * 0.7);
+		width:calc(35px * 0.7);
+		left:calc(-8px * 0.7);
+	}
+
+	.trouser-5{
+
+	}
+	
+	#disclaimercontainer p {
+		color: #f00;
+		text-shadow:none;
+	}
+
+	#gamebody .controlarrow {
+		display: block;
+	}
+
+	/*game pages*/
+	
+	div.gamelogo {
+		width:261px;
+		height:189px;
+		display:block;
+		background:transparent url(/img/game/logo/intro-logo-mobile.png) left top no-repeat;
+	}
+
+	.g-intro-copy {
+		width:360px;
+		position:relative;
+		left:-60px;
+		top:-80px;
+	}
+	
+/*div.g-instructions {
+	width:460px;
+	height:220px;
+	overflow:hidden;
+	margin: -25px auto 0 auto;
+	transform: scale(0.8);
+	-webkit-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+}
+
+div.slideholder {
+	width:3600px;
+	height:220px;
+	position:relative;
+}
+
+div.slide {
+	width:460px;
+	height:183px;
+	float:left;
+}
+
+div.slide img {
+	margin:20px auto;
+	display:block;
+	width:591px;
+}
+div.slide img.arrow {
+	width:15px;
+	height:22px;
+	position:relative;
+	top:70px;
+}
+
+div.slide img.arrow.left {
+	left:-220px;
+	cursor:pointer;
+}
+
+div.slide img.arrow.right {
+	left:220px;
+	cursor:pointer;
+}
+
+div.slide img.arrow.right.higher {
+	left:220px;
+	cursor:pointer;
+	top:30px;
+}
+
+div.playgamenow {
+	position:relative;top:115px;left:360px;
+}
+div.playgamenow a {
+	background-color:#fee1e1;
+}
+
+#gislide1 {
+	background:transparent url(/img/game/instructions/mobintro1.png) center center no-repeat;
+	background-size:80%;
+}
+#gislide2 {
+	background:transparent url(/img/game/instructions/mobintro2.png) center center no-repeat;
+	background-size:80%;
+}
+#gislide3 {
+	background:transparent url(/img/game/instructions/mobintro3.png) center center no-repeat;
+	background-size:80%;
+}
+#gislide4 {
+	background:transparent url(/img/game/instructions/mobintro4.png) center center no-repeat;
+	background-size:80%;
+}
+	*/
+.levelmarketbutton {
+	position:relative;
+	top:-20px;
+	left:310px;
+}
+.g-intro-copy.center {
+	margin:0;
+	width:450px;
+	padding-top:80px;
+	left:0px;
+	margin-left:30px;
+}
+.levelslot {
+	margin:10px 0px 0px 0px;
+}
+
+#levelholder {
+	width:440px;
+	overflow:hidden;
+}
+
+#level1slot.available {
+	background:transparent url(/img/game/levelselect/level_1_open.png) center 8px no-repeat;
+	margin-right:5px;
+}
+#level2slot.available {
+	background:transparent url(/img/game/levelselect/level_2_open.png) center 8px no-repeat;
+	margin-right:5px;
+}
+#level3slot.available {
+	background:transparent url(/img/game/levelselect/level_3_open.png) center 8px no-repeat;
+}
+#level1slot.unavailable {
+	background:transparent url(/img/game/levelselect/level_1_closed.png) center center no-repeat;
+	margin-right:5px;
+}
+#level2slot.unavailable {
+	background:transparent url(/img/game/levelselect/level_2_closed.png) center center no-repeat;
+	margin-right:5px;
+}
+#level3slot.unavailable {
+	background:transparent url(/img/game/levelselect/level_3_closed.png) center center no-repeat;
+}	
+
+.g-intro-copy .normalbutton.results {
+	width:102px;
+}
+.g-intro-copy .normalbutton.results a {
+	font-size:2.1rem;
+
+}
+
+.g-intro-copy.wide {
+	width:90%;
+	margin-left:20%;
+}
+
+.results_menu, .results_market, .results_level {
+	margin-right:7px;
+}
+
+	#marketstall h1 {
+		margin-left:30px;
+		margin-top:-10px;
+	}
+
+	#marketcarousel {
+		width:100%;
+		margin-top:5px;
+		height:120px;
+	}
+	div.mc_viewport {
+		width:380px;
+		margin-left:65px;
+		height:100px;
+	}
+	.mc_controls {
+		
+	}
+	
+	.mc_controls div.arrl {
+		left:-210px;
+		top:-72px;
+	}
+	.mc_controls div.arrr {
+		left:213px;
+		top:-93px;
+	}
+	
+	div.carouselitem {
+		display:block;
+		width:75px;
+		height:85px;
+		margin:0;
+		padding:0px 5px;
+		float:left;
+	}
+
+	div.carouselitem div.imghold {
+		width:60px;
+		height:60px;
+		display:block;
+		overflow:hidden;
+	}
+	
+	div.carouselitem div.imghold img {
+		width:60px;
+		height:auto;
+	}
+
+	span.carouseloption {
+		color:#ff0000;
+		text-align:center;
+		width:60px;
+	}
+	
+	
+	#marketstall #backbutton {
+		bottom:90px;
+	}
+	
+	
+	#marketstall #backbutton p {
+		font-size:2rem;
+		margin-top:15px;
+	}
+	
+	.mc_controls div.arrl {
+		left:38px;
+		top:-82px;
+	}
+	.mc_controls div.arrr {
+		left:439px;
+		top:-105px;
+	}
+	
+	.levelslot span.alttext {
+		height:50px;
+		font-size:3rem;
+		margin-left: 7px;
+		margin-top: 12px;
+		width: 130px;
+	}
+	
+}
+
+@media (max-width: 960px){ /* small tablets landscape */
+	
+	body{
+		/*For iOS7 toolbar tint*/
+		background-color: #f31b0f;
+	}
+
+	html {
+		font-size: 40%;
+		/* font-size: 52.5%; */
+	}
+
+	#background {
+		width:100%;
+		height: 100%;
+		background-size:43px 1020px;
+	}
+
+	.normalbutton {
+		width: 100px;
+	}
+
+	.normalbutton a, .normalbutton input[type="submit"] {
+		height: 30px;
+		line-height: 130%;
+		border-radius:5px;
+	}
+
+	#startbutton a{
+		line-height: 190% !important;
+	}
+	
+	#introcontainer {
+		width:340px;
+		height:260px;
+		margin-left: -275px;
+		margin-top: -200px;
+	}
+
+	#introtextcontainer {
+		float:right;
+		margin-right: 0px;
+		width:380px;
+	}
+
+	#home h1 {
+		margin-left: -100px;
+		letter-spacing: -5px;		
+	}
+	
+	#home #maintext {
+	}
+
+	#home #startbutton {
+		margin-top: -8px;
+	}
+
+	#home #loginline {
+	}
+
+	#home #logintitle {
+		
+	}
+
+	#home #loginbutton {
+		
+	}
+	
+	
+
+
+	.bgelement {
+		background-size:50% 50%;
+	}
+	
+	#home  #bush {
+		left: -880px;
+		top: -18px;
+		background-size:50% 50%;
+	}
+
+	#home  #character {
+		background-size:50% 50%;
+		left: 40px;
+		top: -95px;
+	}
+
+	#home  #sign {
+		background-size:50% 50%;
+		top: -46px;
+		left: 114px;
+	}
+	
+	#tree {
+		background-size:50% 50%;
+		left: 115px;
+		top: -280px;
+		z-index:0;
+	}
+
+	#home #webappprompt {
+		position:absolute;
+		bottom: 50px;
+		left:50%;
+		margin-left:-150px;
+		background:url(/img/prompt-sign.png) no-repeat top left;
+		background-size:cover;
+		width:300px;
+		height:187px;
+		padding:20px 0 0 20px;
+	}
+	
+	#home #webappprompt #closeprompt {
+		position:absolute;
+		top:23px;
+		right:12px;
+	}
+	
+	#home #webappprompt p {
+		font-size:1.4rem;
+		line-height:2.2rem;
+		color:#ffffff;
+		padding-right:20px;
+		margin-top:20px;
+	}
+	
+	#home #webappprompt p span img {
+		width:15px;
+		height:auto;
+		display:inline-block;
+	}
+	
+	#billboard, #marketstall {
+		background-size: cover;
+		width: 566px;
+		height: 365px;
+		margin-top:-192px;
+		margin-left:-360px;
+		padding-left:30px;
+		padding-right:40px;
+	}
+
+	#billboard #nextbutton {
+		position: absolute;
+		right:55px;
+		bottom:90px;
+	}
+
+	#billboard #continuebutton {
+		width:70px; 
+		height: 16px;
+		right:150px;
+		bottom:90px;
+	}
+	
+	#billboard #backbutton {
+		width:50px; 
+		height: 16px;
+		left:42px;
+		bottom:90px;
+	}
+
+	#backbutton img {
+		margin-top:-1px;
+	}
+	
+	#billboardbush {
+		background-size:50% 50%;
+		left: -650px;
+		top: -22px;
+	}
+	
+	input, select {
+		-webkit-appearance: none;
+	}
+
+	#user form #fields, #login form #fields, #signup form #fields, #question form #fields, #forgot form #fields, #reset form #fields {
+		width: 400px;
+		height: 156px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -200px;
+		margin-top: -58px;
+	}
+
+	#forgot form #fields{
+		margin-top: -90px;
+	}
+
+	#user form #error {
+		right:80px;
+		top:80px;
+	}
+	
+	#user form .grid2col {
+		height:35px;
+	}
+
+	.grid2col .column.label {
+		padding-top:5px;
+	}
+	
+	.inputbox {
+		height: 30px;
+	}
+
+	form #error {
+		position:absolute;
+		top:45px;
+		right:100px;
+	}
+	
+	#character #accessories .grid3col {
+		height:auto;
+	}
+	
+	#character #accessories .grid3col .column label img {
+		height:24px;
+		width:24px;
+	}
+	
+	#character #accessories .grid3col .column.first img, #character #accessories .grid3col .column.last img {
+		width:10px;
+	}
+	
+	#login form #fields {
+		width: 400px;
+		margin-left: -180px;
+		margin-top: -58px;
+	}
+
+	#goalscontainer {
+		width: 420px;
+		height: 222px;
+		margin-left: -280px;
+		margin-top: 10px;
+	}
+	
+	#goalscontainer p {
+		font-size:1.5rem;
+		line-height:1.5rem;
+	}
+	
+	.goal {
+		width:100%;
+	}
+	
+	.goal img {
+		width:100%;
+		height:auto;
+	}
+	
+	.goal.active a {
+		width:115px;
+		height:53px;
+	}
+	
+	.goal.active a img {
+		width:55px;
+		height:55px;
+		top:-3px;
+		left:28px;
+	}
+	
+	#goal-setup #goals-form-container {
+		margin-top:8px
+	}
+	
+	#goal-setup .column label {
+		height:25px;
+		width:90%;
+	}
+	
+	#goal-setup .column input, #goal-setup .column span {
+		line-height:15px;
+	}
+	
+	#goal-setup #goals-form-container p {
+		margin:5px 0;
+	}
+	
+	#goal-setup .grid3col {
+		height:39px;
+	}
+	
+	#goal-setup .grid3col .column.first img, #goal-setup .grid3col .column.last img {
+		width:10px;
+		height:25px;
+	}
+	
+	#goal-setup .grid3col .column img {
+		width:35px;
+		height:35px;
+		margin:0 13px;
+	}
+
+	#goal-setup form #error {
+		top:50px;
+	}
+	
+	#signup label.insidelabel, #login label.insidelabel {
+		width:95%;
+	}
+	
+	#menu-buttons a {
+		max-width:225px;
+	}
+	
+	#calculator #bush {
+		left: -600px;
+		top: -10px;
+		background-size:50% 50%;
+	}
+	
+	#calculator #bush2 {
+		left: 100px;
+		top: 0px;
+		background-size:50% 50%;
+	}
+	
+	#calculator #sun {
+		background-size:50% 50%;
+		right: -230px;
+		top: -230px;
+	}
+	
+	#calculator #machine {
+	}
+	
+	#calculator #play-sign {
+		bottom: -50px;
+		left: 20px;
+	}
+	
+	#calculator #play-sign .no-ajaxy {
+		top:15px;
+		right:90px;
+	}
+	
+	#calculator #play-sign img {
+		width:50%;
+		height:auto;
+	}
+	
+	#calculator #play-sign .no-ajaxy img {
+		width:100%;
+	}
+	
+	#machine-base{
+	}
+
+	#machine-tank{
+	}
+	
+	#machine-tank-middle{	
+		-webkit-box-shadow:none;
+		box-shadow:none; 
+	}
+
+	#machine-tank-cover{
+	}
+
+	.tankcoins {
+	}
+	
+	#sliders-container .grid2col {
+	}
+
+	.slider-hint-button {
+	}
+
+	.slider-hint-button-deselected {
+	}
+
+	.slider-hint-button-selected {
+	}
+
+	.slider-hint-button-selected-top {
+	}
+
+	.slider-hint-button-selected-middle {
+	}
+
+	.slider-hint-button-selected-bottom {
+	}
+
+	.slider-hint-button a {
+		font-size: 1.3rem;
+		line-height:2.5rem;
+	}
+
+	.slider-hint-button-selected-top a, .slider-hint-button-selected-middle a, .slider-hint-button-selected-bottom a{
+		
+	}
+	
+	
+	#slider-help-panel p {
+		font-size: 1.4rem;
+	}
+	
+	#slider-help-panel {
+	}
+	
+	/*SLIDERS*/
+
+	#sliders-container{
+	}
+	
+	#sliders-container .column {
+/*		width:25%;
+		margin-right:5%;*/
+	}
+	
+	#sliders-container .column.last {
+/*		width:70%;
+		margin-right:0;*/
+	}
+
+	.slider-container{
+	}
+
+	.slider{
+	}
+
+	.slider-container a {
+		font-size: 1.3rem;
+	}
+
+	.price-range-both.value {
+	}
+
+	.slider-joint{
+	}
+	
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+/*		background: url(../img/calculator/slider-scrubber.png) 100% 50% no-repeat;
+		background-size: 70%;
+		line-height:38px;
+		width:38px;
+		height:38px;
+		top:-2.3em;*/
+	}
+
+	/*END SLIDERS*/
+
+
+	#machine-goals {
+	}
+
+	#machine-goals .goal {
+	}
+		
+	#middle-cog{
+	}
+	
+	#right-cog{
+	}
+
+	
+	#total-interest {
+	}
+
+	#total-interest span {
+		font-size: 2.1rem;
+	}
+	
+	#interest-container {
+	}
+
+	#interest-rates {
+	}
+
+
+	#interest-rates span {
+		font-size: 2.1rem;
+	}
+
+	#interest-selector {
+	}
+	
+	#interest-label{
+	}
+
+	#interest-value{
+	}
+
+	#interest-value p, #interest-value p span{
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	#interest-value p{
+		font-size: 11px;
+	}
+	
+	#total-container {
+	}
+
+	#total-label {
+	}
+
+	#total-label span{
+		font-size: 3.5rem;
+	}
+
+	#total-label p{
+		font-size: 3.5rem;
+	}
+
+	#total-container #byage  p{
+		font-size: 1.7rem;
+	}
+	
+	#total-container #age {
+	}
+	
+	#total-container #age p {
+		font-size: 3rem;
+	}
+
+	#total-container #age-fraction {
+	}
+
+	#age-fraction p {
+		font-size: 2.5rem;
+	}
+	
+	#total-container #years {
+	}
+
+	#total-container #years p {
+		font-size: 1.6rem;
+	}
+	
+	#side-buttons {
+	}
+			
+	.side-button {
+	}
+
+	.side-button  a {
+	}
+	
+	#button-menu {
+	}
+
+	#button-tips {
+	}
+	
+	/*START MEASURE*/
+
+	#tape-drag {
+		width:34px;
+		height:150px;
+		left: 26px;
+	}
+	
+	#tape-measure{
+}
+	
+	#tapeContainer {
+		height: 262px;
+		width: 70px;
+		display: block;
+	}
+	
+	#tape{
+		background-size: 70%;
+		width:34px;
+		max-height:245px;
+		margin-left: -10px;
+		height:140px; /* modify this to stretch it */
+		min-height:140px;
+	}
+	
+	#tape-age-title {
+		margin-left: -5px;
+		margin-top: 22px;
+	}
+
+	#tape-age {
+		margin-left: 18px;
+		margin-top: 32px;
+		letter-spacing: -2px;
+		width: 26px;
+	}
+
+	#tape-age  p{
+		font-size: 2.8rem;
+	}
+
+	#tape-age-fraction{
+	}	
+	
+	#tape-holder-cover {
+	}
+	
+	#tape-holder-cog{
+	}
+
+	#tape-holder{
+	}
+
+	/* END MEASURE*/
+	
+	/* GLOSSARY */
+	
+	#glossary {
+		width:40%;
+	}
+	
+	#glossary-terms .item img.icon {
+		width:35px;
+		height:auto;
+		top:6px;
+	}
+	
+	#glossary-terms .item .title a h4 {
+		font-size: 3rem;
+		margin: 17px auto;
+	}
+	
+	/* END GLOSSARY */
+
+	/* CHARACTER PAGE */
+
+#character #fields {
+	width:75%;
+	margin-left:25%;
+}
+/* END CHARACTER PAGE*/
+	/*CHARACTER*/
+
+	/*.character div{
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+}*/
+
+
+.character {
+	width:-webkit-calc(185px * 0.7);
+	height:-webkit-calc(450px * 0.7);
+	width: calc(185px * 0.7);
+	height: calc(450px * 0.7);
+}
+
+#calculator .character{
+	left: 785px;
+}
+
+#character .character{
+	position: relative;
+	margin: -55px auto 0 5px;
+}
+
+.hair{
+	height: -webkit-calc(115px * 0.7);
+	height: calc(115px * 0.7);
+}
+
+.hair-front{
+	width:-webkit-calc(180px * 0.7);
+	height:-webkit-calc(115px * 0.7);
+	width: calc(180px * 0.7);
+	height: calc(115px * 0.7);
+	left: -webkit-calc(-5px * 0.7);
+	left: calc(-5px * 0.7);
+}
+
+.hair-back{
+	width:-webkit-calc(142px * 0.7);
+	height:-webkit-calc(171px * 0.7);
+	width: calc(142px * 0.7);
+	height: calc(171px * 0.7);
+}
+
+
+.ear{
+	width:-webkit-calc(25px * 0.7);
+	height:-webkit-calc(41px * 0.7);
+	width: calc(25px * 0.7);
+	height: calc(41px * 0.7);
+
+}
+
+.ear-left{
+}
+
+.ear-right{
+}
+
+.head{
+	width:-webkit-calc(135px * 0.7);
+	height:-webkit-calc(135px * 0.7);
+	width: calc(135px * 0.7);
+	height: calc(135px * 0.7);
+}
+
+.eye{
+	width:-webkit-calc(40px * 0.7);
+	height:-webkit-calc(41px * 0.7);
+	width: calc(40px * 0.7);
+	height: calc(41px * 0.7);
+}
+
+div.eye:nth-of-type(2){
+}
+
+.eyebrow-left{
+	width:-webkit-calc(45px * 0.7);
+	height:-webkit-calc(22px * 0.7);
+	width: calc(45px * 0.7);
+	height: calc(22px * 0.7);
+}
+
+.eyebrow-right{
+	width:-webkit-calc(45px * 0.7);
+	height:-webkit-calc(22px * 0.7);
+	width: calc(45px * 0.7);
+	height: calc(22px * 0.7);
+}
+
+.nose{
+	width:-webkit-calc(19px * 0.7);
+	height:-webkit-calc(9px * 0.7);
+	width: calc(19px * 0.7);
+	height: calc(9px * 0.7);
+	margin-top: -webkit-calc(80px * 0.7);
+	margin-top: calc(80px * 0.7);
+}
+
+.mouth{
+	width:-webkit-calc(107px * 0.7);
+	height:-webkit-calc(48px * 0.7);
+	width: calc(107px * 0.7);
+	height: calc(48px * 0.7);
+}
+
+.neck{
+	width:-webkit-calc(30px * 0.7);
+	height:-webkit-calc(15px * 0.7);
+	width: calc(30px * 0.7);
+	height: calc(15px * 0.7);
+}
+
+.shirt{
+	width:-webkit-calc(105px * 0.7);
+	height:-webkit-calc(84px * 0.7);
+	width: calc(105px * 0.7);
+	height: calc(84px * 0.7);
+	margin-bottom: -webkit-calc(-4px * 0.7);
+	margin-bottom: calc(-4px * 0.7);
+}
+
+.shirt-top{
+	height:-webkit-calc(28px * 0.7);
+	height: calc(28px * 0.7);
+}
+
+.shirt-bottom{
+	height:-webkit-calc(56px * 0.7);
+	height: calc(56px * 0.7);
+	top: -webkit-calc(28px * 0.7);
+	top: calc(28px * 0.7);
+}
+
+
+.shirt-logo{
+	width:-webkit-calc(40px * 0.7);
+	height:-webkit-calc(38px * 0.7);
+	width: calc(40px * 0.7);
+	height: calc(38px * 0.7);
+}
+
+.arm{
+	width:-webkit-calc(52px * 0.7);
+	height:-webkit-calc(90px * 0.7);
+	width: calc(52px * 0.7);
+	height: calc(90px * 0.7);
+}
+
+.arm-right{
+}
+
+.arm-left{
+
+}
+
+.hand{
+	width:-webkit-calc(42px * 0.7);
+	height:-webkit-calc(35px * 0.7);
+	width: calc(42px * 0.7);
+	height: calc(35px * 0.7);
+}
+
+.hand-right{
+}
+
+.hand-left{
+}
+
+.char-bottom div{	
+
+}
+
+.fixed-char-top {
+	height: -webkit-calc(215px * 0.7);
+	height: calc(215px * 0.7);
+}
+
+.char-top-wrapper{
+	height:-webkit-calc(350px * 0.7);
+	height: calc(350px * 0.7);
+}
+
+.char-top{
+	height: -webkit-calc(215px * 0.7);
+	height: calc(215px * 0.7);
+}
+
+.char-bottom{
+	height: -webkit-calc(200px * 0.7);
+	height: calc(200px * 0.7);
+}
+
+
+
+.legs{
+}
+
+.legs-top{
+	width:-webkit-calc(75px * 0.7);
+	height:-webkit-calc(35px * 0.7);
+	width: calc(75px * 0.7);
+	height: calc(35px * 0.7);
+}
+
+.leg-left, .leg-right{
+	height:-webkit-calc(200px * 0.7);
+	width:-webkit-calc(18px * 0.7);
+	height: calc(200px * 0.7);
+	width: calc(18px * 0.7);
+}
+
+.leg-left{
+
+}
+
+.leg-right{
+
+}
+
+.shoes{
+
+}
+
+.shoes-left{
+	width:-webkit-calc(70px * 0.7);
+	height: -webkit-calc(25px * 0.7);
+	width: calc(70px * 0.7);
+	height: calc(25px * 0.7);
+}
+
+.shoes-right{
+	width:-webkit-calc(70px * 0.7);
+	height: -webkit-calc(25px * 0.7);
+	width: calc(70px * 0.7);
+	height: calc(25px * 0.7);
+}
+
+
+.trouser-leg{
+	height:-webkit-calc(200px * 0.7);
+	width:-webkit-calc(35px * 0.7);
+	left:-webkit-calc(-8px * 0.7);
+	height:calc(200px * 0.7);
+	width:calc(35px * 0.7);
+	left:calc(-8px * 0.7);
+}
+
+/*accessories*/
+
+.accessory {
+	width:-webkit-calc(188px * 0.7);
+	height: -webkit-calc(238px * 0.7);
+	width: calc(188px * 0.7);
+	height: calc(238px * 0.7);
+}
+
+.acces-top{
+	width:-webkit-calc(188px * 0.7);
+	height: -webkit-calc(162px * 0.7);
+	width: calc(188px * 0.7);
+	height: calc(162px * 0.7);
+}
+
+.acces-top-hat{
+}
+
+.acces-top-bunny{
+}
+.acces-glasses{
+	width: -webkit-calc(155px * 0.7);
+	height: -webkit-calc(64px * 0.7);
+	width: calc(155px * 0.7);
+	height: calc(64px * 0.7);
+	left: -webkit-calc(-10px * 0.7);
+	left: calc(-10px * 0.7);
+}
+
+.acces-glasses-sun{
+}
+
+.acces-glasses-bar{
+}
+
+.acces-mouth{
+	width: -webkit-calc(86px * 0.7);
+	height: -webkit-calc(28px * 0.7);
+	width: calc(86px * 0.7);
+	height: calc(28px * 0.7);
+}
+
+.acces-mouth-mustache{
+}
+
+/*SKINS AND FACES OF CHARACTER (NON-GENDER)*/
+
+.trouser-1{
+
+}
+
+.trouser-2{
+	height: -webkit-calc(200px * 0.7);
+	width: -webkit-calc(35px * 0.7);
+	left: -webkit-calc(-8px * 0.7);
+	height: calc(200px * 0.7);
+	width: calc(35px * 0.7);
+	left: calc(-8px * 0.7);
+}
+
+.trouser-3{
+	height: -webkit-calc(150px * 0.7);
+	width: -webkit-calc(35px * 0.7);
+	left: -webkit-calc(-8px * 0.7);
+	height:calc(150px * 0.7);
+	width:calc(35px * 0.7);
+	left:calc(-8px * 0.7);
+}
+
+.trouser-4{
+	height: -webkit-calc(150px * 0.7);
+	width: -webkit-calc(35px * 0.7);
+	left: -webkit-calc(-8px * 0.7);
+	height:calc(150px * 0.7);
+	width:calc(35px * 0.7);
+	left:calc(-8px * 0.7);
+}
+
+.trouser-5{
+
+}
+
+
+}

@@ -1,0 +1,27 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$data = $_POST;
+	
+	$game = new Game();
+	if(isset($_SESSION['user'])) {
+		$user = $_SESSION['user'];	
+	} else {
+		echo json_encode(array('success' => 0, 'reason' => 'You must be logged in to purchase items'));
+		exit;
+	}
+	
+	$result = $game->buyItem($user['id'], $data['accessory']);
+	if(!$result) {
+		echo json_encode(array('success' => 0));
+	} else {
+		if(isset($result['coins'])) {
+			$_SESSION['user']['coins'] = $result['coins'];
+		}
+		if(isset($result['type']) && $result['type'] == "key") {
+			$_SESSION['user']['level'] = $_SESSION['user']['level'] + 1;
+		}
+		echo json_encode($result);
+	}
+?>

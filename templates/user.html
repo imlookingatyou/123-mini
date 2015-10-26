@@ -1,0 +1,77 @@
+<div id="user" class="data page billboard">
+	<div id='billboard'>
+		<h1>Introduce yourself.</h1>
+		<h2>Tell us a bit about you, so we’ll know who to say ‘hi’ to when you come back.</h2>
+		<form id="user-creation" method="post" action="">
+			<div id="fields">
+				<div class="field grid2col">
+					<div class="column label">
+						<label for="name"><p>Enter your first name</p></label>
+					</div>
+					<div class="column last">
+						<input type="text" data-type="text" name="name" id="name" value="" class="inputbox"/>
+					</div>
+				</div>
+				<div class="field grid2col">
+					<div class="column label">
+						<label for="age"><p>How old are you?</p></label>
+					</div>
+					<div class="column last">
+						<select id="age" data-type="select" name="age" class="inputbox">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+						</select>
+					</div>
+				</div>
+				<div class="field grid2col">
+					<div class="column label">
+						<label for="age"><p>What month were you born?</p></label>
+					</div>
+					<div class="column last">
+						<select id="month" data-type="select" name="month" class="inputbox">
+							<option value="1">January</option>
+							<option value="2">February</option>
+							<option value="3">March</option>
+							<option value="4">April</option>
+							<option value="5">May</option>
+							<option value="6">June</option>
+							<option value="7">July</option>
+							<option value="8">August</option>
+							<option value="9">September</option>
+							<option value="10">October</option>
+							<option value="11">November</option>
+							<option value="12">December</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		
+			<div id="buttons">
+				<div id='backbutton' class='back-button'>
+					<a href='/home'><img src='/img/back-arrow.png'/><p>Back</p></a>
+				</div>
+				<div id='continuebutton' class='linkButton'>
+					<a href='/calculator'><p>Go to calculator</p></a>
+				</div>
+				<div id='nextbutton' class='normalbutton inversebuttoncolors'>
+					<input type="submit" value="Next bit" name="submit" id="submit" />
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div id='bgextras'>
+		<div id='billboardbush' class='bgelement'></div>
+		<div id='tree' class='bgelement'></div>
+	</div>
+</div>

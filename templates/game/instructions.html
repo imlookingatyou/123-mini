@@ -1,0 +1,86 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$user = array();
+	$userSet = false;
+	if(isset($_SESSION['user'])) {
+		$userSet = true;
+		$user = $_SESSION['user'];
+	} else {
+		$user = array('level' => 1, 'coins' => 0);
+	}
+?>
+<div id="instructions" class="data page billboard gintro">
+	<div id='billboard'>
+			<h1>How to play</h1>
+		
+			<div class="g-instructions">
+
+<!-- 				<div class="slideholder">
+					<div class="slide" id="gislide1">
+						<div><img src="/img/game/intro-arrow-right.png" alt=">" class="arrow right"/></div>
+					</div>
+					<div class="slide" id="gislide2">
+						<div><img src="/img/game/intro-arrow-left.png" alt="<" class="arrow left"/></div>
+						<div><img src="/img/game/intro-arrow-right.png" alt=">" class="arrow right higher"/></div>
+					</div>
+					<div class="slide" id="gislide3">
+						<div><img src="/img/game/intro-arrow-left.png" alt="<" class="arrow left"/></div>
+						<div><img src="/img/game/intro-arrow-right.png" alt=">" class="arrow right higher"/></div>
+					</div>
+					<div class="slide" id="gislide4">
+						<div><img src="/img/game/intro-arrow-left.png" alt="<" class="arrow left"/></div>
+					</div>
+				</div> -->
+
+			
+			<div id="owl-example" class="owl-carousel">
+				<div class="slide first-slide" id="gislide1">
+					<img src='/img/game/instructions/intro1.png' />
+					<p>Fly your plane by using the up and down arrow keys.</p>
+				</div>
+				<div class="slide" id="gislide2">
+					<img src='/img/game/instructions/intro2.png' />
+					<p>Collect as many coins as you can before the time runs out. Gold coins are worth the most!</p>
+				</div>
+				<?php
+				$class = "";
+				if($userSet == false) {
+					$class = " last-slide";
+				}
+				?>
+				<div class="slide<?php echo $class; ?>" id="gislide3">
+					<img src='/img/game/instructions/intro3.png' />
+					<p>Avoid distractions! They'll eat into your total.</p>
+				</div>
+				<?php
+				if($userSet == true) {
+				?>
+				<div class="slide last-slide" id="gislide4">
+					<img src='/img/game/instructions/intro4.png' />
+					<p>Take your savings to the <b>Mini Market</b>. Here you can buy accessories for your <b>Mini Me</b> and the keys to unlock the next levels.</p>
+				</div>
+				<?php
+				}
+				?>
+			</div>	
+			
+			</div>
+		
+			<div id="buttons">
+				<div id='backbutton' class='back-button'>
+					<a href='javascript:window.history.back()'><img src='/img/back-arrow.png'/><p>Back</p></a>
+				</div>
+				<div id="nextbutton" class='normalbutton inversebuttoncolors'>
+					<a href="/game/levelselect">Play</a>
+				</div>
+			</div>
+			
+	</div>
+	
+	<div id='bgextras'>
+		<div id='billboardbush' class='bgelement'></div>
+		<div id='tree' class='bgelement'></div>
+	</div>
+</div>

@@ -1,0 +1,72 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$user = array();
+	$userSet = false;
+	if(isset($_SESSION['user'])) {
+		$userSet = true;
+		$user = $_SESSION['user'];
+	} else {
+		$user = array('level' => 1, 'coins' => 0, 'id' => 0);
+	}
+	
+	if(isset($_SESSION['lastplay'])) {
+		$lastplay = $_SESSION['lastplay'];
+	} else {
+		$lastplay = array('coinsearned' => 0, 'level' => 1);
+	}
+	
+?>
+<div id="user" class="data page billboard gintro">
+	<div id='billboard'>
+			<h1 class="large">Try again!</h1>
+		
+			<div class="g-intro-copy wide">
+			<?php
+			if($userSet == false) {
+			?>
+				<p class="savedcoinsline">You saved <span class="coins"><?php echo $lastplay['coinsearned']; ?></span></p>
+			
+				<p class="mt50">Hope you enjoyed playing! To gain full access to the Mini Jets game, and to visit the mini market, <a href="/home">click here</a> to go to the 123 Mini Calculator and set up your Mini Me!</p>
+				
+				<div id="buttons" style="width:51%;">
+					<div class='normalbutton inversebuttoncolors results results_menu'>
+						<a href="/menu">Menu</a>
+					</div>
+					<div class='normalbutton inversebuttoncolors results results_play'>
+						<a href="play?level=<?php echo $lastplay['level']; ?>" class="no-ajaxy">Play again</a>
+					</div>
+				</div>
+			<?php
+			} else {
+			?>
+				<p class="savedcoinsline">You saved <span class="coins"><?php echo $lastplay['coinsearned']; ?></span><br/>Your total savings are <span class="coins"><?php echo $user['coins']; ?></span></p>
+			
+				<p class="mt50">Play some more to keep saving, or spend a little at the <strong>Mini Market</strong>.</p>
+			
+				<div class='normalbutton inversebuttoncolors results results_menu'>
+					<a href="/menu">Menu</a>
+				</div>
+				<div class='normalbutton inversebuttoncolors results results_market'>
+					<a href="/game/market">Mini Market</a>
+				</div>
+				<div class='normalbutton inversebuttoncolors results results_level'>
+					<a href="/game/levelselect">Change Level</a>
+				</div>
+				<div class='normalbutton inversebuttoncolors results results_play'>
+					<a href="play?level=<?php echo $lastplay['level']; ?>" class="no-ajaxy">Play again</a>
+				</div>
+			<?php
+			}
+			?>	
+			
+			</div>
+		
+	</div>
+	
+	<div id='bgextras'>
+		<div id='billboardbush' class='bgelement'></div>
+		<div id='tree' class='bgelement'></div>
+	</div>
+</div>

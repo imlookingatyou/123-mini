@@ -1,0 +1,6 @@
+/* $Id: ie.css 69 2008-04-29 11:51:52Z mstillwell $ */
+
+body {margin:0; padding:0}
+
+img {border:0;}
+#accessibility {height:0; visibility:hidden;}

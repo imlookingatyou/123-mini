@@ -1,0 +1,47 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+?>
+
+<div id="gamepage" class="page">
+
+	<div id='gamebody'>
+		<div id='bottombackground' class='tiledbottom slowscroll'></div>
+
+		<div id='gamecontainer'>
+			<canvas id='canvas' width='960' height='600' tabindex='1'>Canvas not supported :(</canvas>
+			<!-- canvas id='canvas' width='960' height='640' tabindex='1'>Canvas not supported :(</canvas -->
+		</div>
+		
+		<div id='controls'>
+			<div id='arrowup' class='controlarrow'></div>
+			<div id='arrowdown' class='controlarrow'></div>
+			<div id='buttonup' class='controlbutton'></div>
+			<div id='buttondown' class='controlbutton'></div>
+		</div>
+		
+		<div id='topbar'>
+			<div id='soundbutton' class='topbarbutton'></div>
+			<div id='coins'>0</div>
+			<div id='multiplier'></div>
+			<div id='levelnumber'></div>
+			<div id='timercontainer'>
+				<div id='timerbar'>
+					<div id='timerbarfill'></div>
+				</div>
+				<div id='clock'></div>
+			</div>
+			<div id='closebutton' class='topbarbutton'></div>
+		</div>
+		
+	</div>
+
+	<div id='initialcover' class='cover'>
+		<div id='taptext' class='covertext'>Tap anywhere to start</div>
+	</div>
+
+	<div id='finalcover' class='cover'>
+		<div id='timeup' class='covertext'>Time's Up!</div>
+	</div>
+</div>

@@ -1,0 +1,2052 @@
+@media (max-width: 767px) { 
+	html {
+		font-size:40%;
+	}
+	
+	body {
+		-webkit-text-size-adjust: 100%;
+	}
+	
+	#glossary {
+		width:100%;
+		height:auto;
+		z-index:800;
+	}
+
+	#glossary-terms .item img.icon {
+		width:30px;
+	}
+
+	#glossary-terms .item .title a h4 {
+		font-size:3.5rem;
+	}
+
+	#glossary-terms .item img.icon {
+		top: 10px;
+	}
+
+	#glossary-heading h3 {
+		font-size: 5rem;
+	}
+		
+	#rotateoverlay h1 {
+		font-size:3.5rem;
+		margin-top:55px;
+		margin-left:-45px;
+	}
+	
+	#rotateoverlay h2 {
+		font-size:1.5rem;
+		margin-left:-110px;
+	}
+	
+	.normalbutton {
+		width:100px;
+	}
+	
+	.normalbutton a, .normalbutton input[type="submit"] {
+		height: 30px;
+		font-size: 2.5rem;
+		line-height: 30px;
+	}
+	
+	#background {
+		background-size:20px 450px;
+		position: fixed;
+	}
+
+	#home {	
+		height:100%;
+		position:relative;
+		min-height:320px;
+	}
+	
+	#home #introcontainer {
+		width: 53%;
+		height:130px;
+		top:0;
+		left:0;
+		margin-left:25px;
+		margin-top:0;
+	}
+	
+	#home h1 {
+		font-size: 11rem;
+		letter-spacing:-3px;
+		text-align: right;
+		margin-right: 0px;
+	}
+	
+	#home #introtextcontainer {
+		width:100%;
+		margin-right:0px;
+		margin-top: -25px;
+	}
+	
+	#home #maintext {
+		font-size: 2rem;
+		width: 320px;
+		margin-right: 4px;
+	}
+	
+	#home #introtextcontainer h2 {
+		font-size: 2rem;
+		margin:0;
+		letter-spacing:-0.5px;
+	}
+	
+	#home #startbutton {
+		margin-top:0;
+	}
+	
+	#home #loginline {
+		margin-top:0;
+		letter-spacing:-0.5px;
+		clear:both;
+		margin-right: 0px;
+	}
+	#home #logintitle, #home #logintitle a {
+		font-size: 2rem;
+	}
+	
+	#home #bush, #home #character, #home #sign, #home #tree {
+		background-size:45%;
+	}
+	
+	#home #bush {
+		top:-72px;
+		left: -800px;
+	}
+	
+	#home #character {
+		top: -125px;
+		left: 10px;
+	}
+	
+	#home #sign {
+		top: -75px;
+		left: 80px;
+	}
+	
+	#home #tree {
+		top: -300px;
+		left: 44px;
+	}
+	
+	#home #webappprompt {
+		position:absolute;
+		bottom:50px;
+		left:50%;
+		margin-left:-100px;
+		background:url(/img/prompt-sign.png) no-repeat top left;
+		background-size:cover;
+		width:200px;
+		height:125px;
+		padding:20px 0 0 10px;
+	}
+	
+	#home #webappprompt #closeprompt {
+		position:absolute;
+		top:15px;
+		right:7px;
+	}
+	
+	#home #webappprompt p {
+		font-size:1.4rem;
+		line-height:2.2rem;
+		color:#ffffff;
+		padding-right:30px;
+		margin-top:0;
+	}
+	
+	#home #webappprompt p span img {
+		width:15px;
+		height:auto;
+		display:inline-block;
+	}
+	
+	.billboard #bgextras {
+		display:none;
+	}
+	
+	.billboard #billboard {
+		width: 100%;
+		height: 100%;
+		margin-top:0px;
+		margin-left:0px;
+		padding-left:15px;
+		padding-right:15px;
+		top:0;
+		left:0;
+		position:absolute;
+		background:#f31b0f;
+		padding-top:0;
+		min-height: 286px;
+	}
+	
+	.billboard #billboard h1 {
+		font-size:7rem;
+	}
+	
+	.billboard #billboard h2 {
+		font-size: 2.7rem;
+		letter-spacing:-0.5px;
+		margin-bottom: 0;
+	}
+	
+	#user form #fields, #login form #fields, #signup form #fields {
+		width: 90%;
+		height: 100px;
+		position: absolute;
+		top: 32%;
+		left: 5%;
+		margin-left: 0px;
+		margin-top: 10px;
+	}
+	
+	#user form #fields .grid2col .column, #login form #fields .grid2col .column, #signup form #fields .grid2col .column, #forgot .grid2col .column, #reset .grid2col .column {
+		width: 50%;
+	}
+
+	#user form #fields .grid2col .last, #login form #fields .grid2col .last, #signup form #fields .grid2col .last, #forgot .grid2col .last, #reset .grid2col .last {
+		width: 50%;
+	}
+	
+	form #error {
+		top:45px;
+		left:240px;
+		width:280px;
+	}
+
+	#user form #error {
+		left:285px;
+		top:90px;
+		width:280px;
+	}
+	
+	#user form .grid2col {
+		height:45px;
+	}
+
+	#user form #error p, #user form #error ul li {
+		font-size: 1.8rem;
+		letter-spacing: 0;
+	}
+	
+	#billboard p, #goal-setup #goals-form-container p, #login form p {
+		font-size:3.3rem;
+		letter-spacing:-0.5px;
+		margin: 0px 0px 10px 0px;
+	}
+	
+	#login form p {
+		font-size:2.8rem;
+		padding-right:10px;
+	}
+	
+	 #signup form p  {
+		font-size:2.8rem;
+		letter-spacing:-0.5px;
+		margin-bottom:0;
+	}
+
+	#signup form #error p  {
+		font-size:2rem;
+		margin-top:15px;
+		margin-left:0px;
+	}
+	
+	#forgot form #error {
+		top:40px;
+		left:280px;
+		width:250px;
+	}
+	
+	#reset form #error {
+		top:45px;
+		left:285px;
+	}
+	
+	#forgot #get-question {
+		width:88px;
+	}
+	
+	#billboard p {
+		font-size:2.7rem;
+	}
+
+	#continuebutton a p{
+		margin-bottom: 0px;
+	}
+	
+	label.insidelabel input, .inputbox, label.insidelabel span, #question-form label.insidelabel span {
+		font-size: 2.5rem;
+		letter-spacing:-0.5px;
+		padding:0 0 0 3px;
+		height:30px;
+		margin-bottom:0;
+		line-height: 18px;
+		width: 100%;
+	}
+
+	#question-form .last label {
+		width: 80%;
+	}
+
+	#question-form label.insidelabel span{
+		line-height: 25px;
+	}
+	
+	#signup form label span {
+		padding-top:4px;
+	}
+
+	#billboard #continuebutton {
+		width:126px; 
+		height: 16px;
+		right: 28%;
+		bottom: 18px;
+		line-height: 18px;
+	}
+
+	#billboard #backbutton {
+		width: 100px;
+		line-height: 18px;
+		left:5%;
+		bottom:5%;
+	}
+	#billboard #backbutton a {
+		display: block;
+	}
+
+	#billboard #backbutton p{
+		margin-bottom: 0px;
+	}
+	
+	#backbutton img {
+		width:8px;
+		height:auto;
+		margin-top: 3px;
+	}
+	
+	#billboard #nextbutton {
+		right:5%;
+		bottom:15px;
+	}
+	
+	#content #menu.data h1 {
+		max-height:50px;
+	}
+	
+	input[type="submit"] {
+		min-width:70px;		
+	}
+
+	#secret form #error{
+		top: 90px;
+		left: 320px;		
+	}
+
+	#billboard p#char-instruction {
+	 	font-size: 2.3rem;
+	 	margin-bottom: 10px;
+	 	margin-top:5px;
+	}
+
+	#formfootnote p{
+	 	font-size: 1.8rem !important;
+	 	margin-bottom: 15px !important;
+	 }
+
+	#character label, #character .option{
+		font-size: 2.5rem;
+	}
+	
+
+	#goalscontainer{
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+		width: 600px;
+		left: 0%;
+		margin-left: 0;
+		margin-top: 0;
+		position:relative;
+	}
+	
+	#goalscontainer p {
+		line-height: 2.4rem;
+		font-size: 2.4rem;
+		width:90%;
+	}
+	
+	#goalscontainer .goal > img, #goalscontainer .goal {
+		width: 160px;
+		height: auto;
+	}
+
+	.goal.active a {
+		width: 100%;
+		height: 73px;
+	}
+
+	.goal.active a img {
+		width: 82px;
+		height: 82px;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#goal-setup #goalscontainer { 
+		width:520px;
+	}
+	
+	#goal-setup .column label {
+		height:35px;
+	}
+	
+	#goal-setup .column input, #goal-setup .column span {
+		line-height:35px;
+		font-size:2.0rem;
+	}
+	
+	#goal-setup .grid2col .column span.numberpound {
+		position:absolute;
+		top:5px;
+		left:6px;
+		font-size:1.6rem;
+		line-height:35px;
+		color:#fff;
+		border-right:0;
+		z-index:3;
+		display:block;
+		font-weight:400;
+	}
+
+	#goal-setup #goals-form-container {
+		margin-top: 7px;
+	}
+	
+	#goal-setup #goals-form-container p {
+		font-size:2.4rem;
+	}
+	
+	#goal-setup form #error {
+		top:60px;
+		left:275px;
+		width:200px;
+	}
+	
+	#signup form #error {
+		top:65px;
+		left:285px;
+		width:200px;
+	}
+	
+	#login form #error {
+		top:85px;
+		left:285px;
+		width:230px;
+	}
+
+	.grid2col .column {
+		width: 70%;
+	}
+
+	.grid2col .last {
+		width: 20%;
+	}
+
+	#secret .grid2col .last {
+		width: 50%;
+	}
+
+	#goals-form-container .grid2col .column, #login-form .grid2col .column, #signup-form .grid2col .column, #secret .grid2col .column{
+		width: 50%;
+	}
+	
+	#goal-setup .grid3col .column label {
+		height:40px;
+	}
+	
+	#goal-setup .grid3col .column label img {
+		width:40px;
+		height:40px;
+	}
+
+	#tape-drag {
+		width:19px;
+		height:86px;
+		left: 32px;
+	}
+	
+	#tape-measure {
+	}
+	
+	#tapeContainer {
+		height:140px;
+		width:19px;
+		bottom:50px;
+	}
+	
+	#tape{
+		width:19px;
+		height:80px;
+		max-height:140px;
+		min-height:80px;
+		left:40px;
+	}
+	
+	#calculator #play-sign {
+		bottom: -60px;
+		left: -90px;
+	}
+	
+	#calculator #play-sign .no-ajaxy {
+		right:106px;
+		top:11px;
+	}
+	
+	#calculator #play-sign img {
+		width:40%;
+		height:auto;
+	}
+	
+	#calculator #play-sign .no-ajaxy img {
+		width:100%;
+	}
+	
+
+	/*CHARACTER*/
+
+	/*.character div{
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	}*/
+
+
+	.character {
+		width:-webkit-calc(185px * 0.4);
+		height:-webkit-calc(450px * 0.4);
+		width: calc(185px * 0.4);
+		height: calc(450px * 0.4);
+	}
+
+	#calculator .character{
+	}
+
+	#character .character{
+		position: relative;
+		margin: 40px auto 0 25px;
+	}
+
+	.hair{
+		height: -webkit-calc(115px * 0.4);
+		height: calc(115px * 0.4);
+	}
+
+	.hair-front{
+		width:-webkit-calc(180px * 0.4);
+		height:-webkit-calc(115px * 0.4);
+		width: calc(180px * 0.4);
+		height: calc(115px * 0.4);
+		left: -webkit-calc(-5px * 0.4);
+		left: calc(-5px * 0.4);
+	}
+
+	.hair-back{
+		width:-webkit-calc(142px * 0.4);
+		height:-webkit-calc(171px * 0.4);
+		width: calc(142px * 0.4);
+		height: calc(171px * 0.4);
+	}
+
+
+	.ear{
+		width:-webkit-calc(25px * 0.4);
+		height:-webkit-calc(41px * 0.4);
+		width: calc(25px * 0.4);
+		height: calc(41px * 0.4);
+
+	}
+
+	.ear-left{
+	}
+
+	.ear-right{
+	}
+
+	.head{
+		width:-webkit-calc(135px * 0.4);
+		height:-webkit-calc(135px * 0.4);
+		width: calc(135px * 0.4);
+		height: calc(135px * 0.4);
+	}
+
+	.eye{
+		width:-webkit-calc(40px * 0.4);
+		height:-webkit-calc(41px * 0.4);
+		width: calc(40px * 0.4);
+		height: calc(41px * 0.4);
+	}
+
+	div.eye:nth-of-type(2){
+	}
+
+	.eyebrow-left{
+		width:-webkit-calc(45px * 0.4);
+		height:-webkit-calc(22px * 0.4);
+		width: calc(45px * 0.4);
+		height: calc(22px * 0.4);
+	}
+
+	.eyebrow-right{
+		width:-webkit-calc(45px * 0.4);
+		height:-webkit-calc(22px * 0.4);
+		width: calc(45px * 0.4);
+		height: calc(22px * 0.4);
+	}
+
+	.nose{
+		width:-webkit-calc(19px * 0.4);
+		height:-webkit-calc(9px * 0.4);
+		width: calc(19px * 0.4);
+		height: calc(9px * 0.4);
+		margin-top: -webkit-calc(80px * 0.4);
+		margin-top: calc(80px * 0.4);
+	}
+
+	.mouth{
+		width:-webkit-calc(107px * 0.4);
+		height:-webkit-calc(48px * 0.4);
+		width: calc(107px * 0.4);
+		height: calc(48px * 0.4);
+	}
+
+	.neck{
+		width:-webkit-calc(30px * 0.4);
+		height:-webkit-calc(15px * 0.4);
+		width: calc(30px * 0.4);
+		height: calc(15px * 0.4);
+	}
+
+	.shirt{
+		width:-webkit-calc(105px * 0.4);
+		height:-webkit-calc(84px * 0.4);
+		width: calc(105px * 0.4);
+		height: calc(84px * 0.4);
+		margin-bottom: -webkit-calc(-4px * 0.4);
+		margin-bottom: calc(-4px * 0.4);
+	}
+
+	.shirt-top{
+		height:-webkit-calc(28px * 0.4);
+		height: calc(28px * 0.4);
+	}
+
+	.shirt-bottom{
+		height:-webkit-calc(56px * 0.4);
+		height: calc(56px * 0.4);
+		top: -webkit-calc(28px * 0.4);
+		top: calc(28px * 0.4);
+	}
+
+
+	.shirt-logo{
+		width:-webkit-calc(40px * 0.4);
+		height:-webkit-calc(38px * 0.4);
+		width: calc(40px * 0.4);
+		height: calc(38px * 0.4);
+	}
+
+	.arm{
+		width:-webkit-calc(52px * 0.4);
+		height:-webkit-calc(90px * 0.4);
+		width: calc(52px * 0.4);
+		height: calc(90px * 0.4);
+	}
+
+	.arm-right{
+	}
+
+	.arm-left{
+
+	}
+
+	.hand{
+		width:-webkit-calc(42px * 0.4);
+		height:-webkit-calc(35px * 0.4);
+		width: calc(42px * 0.4);
+		height: calc(35px * 0.4);
+	}
+
+	.hand-right{
+	}
+
+	.hand-left{
+	}
+
+	.char-bottom div{	
+
+	}
+
+	.fixed-char-top {
+		height: -webkit-calc(215px * 0.4);
+		height: calc(215px * 0.4);
+	}
+
+	.char-top-wrapper{
+		height:-webkit-calc(350px * 0.4);
+		height: calc(350px * 0.4);
+	}
+
+	.char-top{
+		height: -webkit-calc(215px * 0.4);
+		height: calc(215px * 0.4);
+	}
+
+	.char-bottom{
+		height: -webkit-calc(200px * 0.4);
+		height: calc(200px * 0.4);
+	}
+
+
+
+	.legs{
+	}
+
+	.legs-top{
+		width:-webkit-calc(75px * 0.4);
+		height:-webkit-calc(35px * 0.4);
+		width: calc(75px * 0.4);
+		height: calc(35px * 0.4);
+	}
+
+	.leg-left, .leg-right{
+		height:-webkit-calc(200px * 0.4);
+		width:-webkit-calc(18px * 0.4);
+		height: calc(200px * 0.4);
+		width: calc(18px * 0.4);
+	}
+
+	.leg-left{
+
+	}
+
+	.leg-right{
+
+	}
+
+	.shoes{
+
+	}
+
+	.shoes-left{
+		width:-webkit-calc(70px * 0.4);
+		height: -webkit-calc(25px * 0.4);
+		width: calc(70px * 0.4);
+		height: calc(25px * 0.4);
+	}
+
+	.shoes-right{
+		width:-webkit-calc(70px * 0.4);
+		height: -webkit-calc(25px * 0.4);
+		width: calc(70px * 0.4);
+		height: calc(25px * 0.4);
+	}
+
+
+	.trouser-leg{
+		height:-webkit-calc(200px * 0.4);
+		width:-webkit-calc(35px * 0.4);
+		left:-webkit-calc(-8px * 0.4);
+		height:calc(200px * 0.4);
+		width:calc(35px * 0.4);
+		left:calc(-8px * 0.4);
+	}
+
+	/*accessories*/
+	
+	.accessory {
+		width:-webkit-calc(188px * 0.4);
+		height: -webkit-calc(238px * 0.4);
+		width: calc(188px * 0.4);
+		height: calc(238px * 0.4);
+	}
+
+	.acces-top{
+		width:-webkit-calc(188px * 0.4);
+		height: -webkit-calc(162px * 0.4);
+		width: calc(188px * 0.4);
+		height: calc(162px * 0.4);
+	}
+
+	.acces-top-hat{
+	}
+
+	.acces-top-bunny{
+	}
+	.acces-glasses{
+		width: -webkit-calc(155px * 0.4);
+		height: -webkit-calc(64px * 0.4);
+		width: calc(155px * 0.4);
+		height: calc(64px * 0.4);
+		left: -webkit-calc(-10px * 0.4);
+		left: calc(-10px * 0.4);
+	}
+
+	.acces-glasses-sun{
+	}
+
+	.acces-glasses-bar{
+	}
+
+	.acces-mouth{
+		width: -webkit-calc(86px * 0.4);
+		height: -webkit-calc(28px * 0.4);
+		width: calc(86px * 0.4);
+		height: calc(28px * 0.4);
+	}
+
+	.acces-mouth-mustache{
+	}
+
+	/*SKINS AND FACES OF CHARACTER (NON-GENDER)*/
+
+	.trouser-1{
+
+	}
+
+	.trouser-2{
+		height: -webkit-calc(200px * 0.4);
+		width: -webkit-calc(35px * 0.4);
+		left: -webkit-calc(-8px * 0.4);
+		height: calc(200px * 0.4);
+		width: calc(35px * 0.4);
+		left: calc(-8px * 0.4);
+	}
+
+	.trouser-3{
+		height: -webkit-calc(150px * 0.4);
+		width: -webkit-calc(35px * 0.4);
+		left: -webkit-calc(-8px * 0.4);
+		height:calc(150px * 0.4);
+		width:calc(35px * 0.4);
+		left:calc(-8px * 0.4);
+	}
+
+	.trouser-4{
+		height: -webkit-calc(150px * 0.4);
+		width: -webkit-calc(35px * 0.4);
+		left: -webkit-calc(-8px * 0.4);
+		height:calc(150px * 0.4);
+		width:calc(35px * 0.4);
+		left:calc(-8px * 0.4);
+	}
+
+	.trouser-5{
+
+	}
+	
+	/* END CHARACTER */
+	
+	/* CALCULATOR */
+	
+	#calculator-wrapper {
+		width:100%;
+		height:100%;
+	}
+	
+	#calculator #machine {
+		width:65%;
+		height:90%;
+		position:absolute;
+		bottom: 0%;
+		left:2%;
+	}
+	
+	#machine-tank {
+	}
+	
+	#machine-tank-middle {
+	}
+	
+	#machine-tank-cover {
+	}
+	
+	#interest-container {
+	}
+
+	#interest-label p{
+		font-size: 1.7rem;
+	}
+	
+	#interest-rates {
+	}
+	
+	#interest-rates span {
+		font-size: 1.7rem;
+	}
+
+	#total-interest {
+	}
+
+	#machine-base {
+	}
+	
+	#machine-goals {
+	}
+
+	#middle-cog {
+	}
+
+	#right-cog{
+	}
+
+	
+	#total-container {
+	}
+	
+	#side-buttons {
+	}
+	
+	.side-button {
+	}
+	
+	#sliders-container {
+	}
+	
+	.slider-container {
+	}
+	
+	.slider {
+		display: none;
+	}
+	
+	.slider-container a {
+	}
+
+	.slider-container input[type="number"] {
+		display:inline-block;
+		height:56%;
+		margin-top:13%;
+		margin-left:-5px;
+	}
+	
+	.slider-container span.numberpound {
+		display:inline-block;
+		height:56%;
+		margin-top:13%;
+		padding-top:2%;
+	}
+	
+	#sliders-container .slider-container.grid3col .column {
+		margin: 0 5% 0 5%;
+	}
+
+	#sliders-container .slider-container.grid3col .column.button {
+		width: 16%;
+		padding-left: 0;
+		margin: 0 0 0 -4px;
+	}
+
+	#sliders-container .slider-container.grid3col .column.button a {
+		line-height: 0rem;
+	}
+	
+	#sliders-container .slider-container.grid3col .column.button a img {
+
+	}
+	
+	.slider-hint-button {
+
+	}
+
+	.slider-hint-button a {
+		line-height:2.5rem;
+	}
+
+	#slider-help-panel {
+		width: 155%;
+		right: 0%;
+		left: 25%;
+		z-index: 4;
+	}
+	
+	#slider-help-panel p {
+		font-size:2rem;
+	}
+	
+	#sliderHintsClose {
+		position: absolute;
+		top: -10%;
+		right: -85%;
+	}
+
+	#interest-container {
+	}
+
+	#interest-rates {
+	}
+	
+	#interest-rates span {
+		font-size: 2rem;
+	}
+
+	#total-interest {
+	}
+
+	#total-interest span {
+		font-size: 2rem;
+	}
+	
+	#total-label {
+	}
+
+	#total-label p {
+	}
+
+	#total-label span, #total-label p, #age, #age-fraction {
+		font-size: 3rem;
+	}
+
+	#total-container #byage{ 
+		
+	}
+	
+	#total-container #byage p{
+	}
+
+	
+	#total-container #age p {
+		font-size: 3rem;
+		letter-spacing:-2px;
+	}
+
+	#total-container #age-fraction {
+	}
+
+	#age-fraction p {
+		font-size: 2rem;
+	}
+		
+	#total-container #years {
+	}
+
+	#total-container #years p, #total-container #total-title p {
+		font-size: 1.6rem;
+	}
+	
+	#tape-holder{
+		width:66px;
+		height:50px;
+	}
+	
+	#tape-holder-cover {
+		width:51px;
+	}
+	
+	#tape-measure{
+		position: absolute;
+		bottom: 0%;
+		left: 64%;
+	}
+	
+	#tape-age-title {
+		margin-top: 0;
+	}
+
+	#tape-age {
+		margin-left: -2px;
+		font-size: 2.8rem;
+	}
+
+	#tape-age  p{
+		font-size: 3.1rem;
+		padding: 0;
+		margin:0;
+	}
+
+	#tape-age-fraction{
+		margin-left: 3px;
+	}
+
+	#tape-age-fraction p {
+		font-size: 2.1rem;
+	}
+	
+	#calculator .character {
+		left:80%;
+	}
+
+	
+	/* END CALCULATOR */
+
+	.hotspot {
+		width: 30px;
+		height: 30px;
+		margin-left:-15px;
+		margin-top:-15px;
+	}
+
+	#character #bottomhotspot {
+		margin-top:-20px;
+	}
+
+	#disclaimercontainer {
+		left: 15px;
+		bottom: 0px;
+	}
+	
+	#calculator #disclaimercontainer {
+		left: auto;
+		bottom: auto;
+		right: 10px;
+		top: 6px;
+		width: 70px;
+	}
+	#calculator #disclaimercontainer p {
+		font-family: frutiger-roman, Arial, Helvetica, sans-serif;
+		text-align: right;
+	}
+	
+	#help {
+		z-index:10;
+		overflow:hidden;
+	}
+	
+	#help .background {
+		display:none;
+	}
+
+	#help #help-content {
+		position:absolute;
+		left:0;
+		top:0;
+		transform:none;
+		-ms-transform:none;
+		-webkit-transform:none;
+		background:url('/img/calculator/help-bg.png') no-repeat top left #f00;
+		background-size:cover;
+		width:100%;
+		height:100%;
+		border:none;
+		border-radius:0px;
+	}
+
+	#help #help-content ol {
+		padding:0;
+		width:65%;
+		margin:10px auto 0;
+	}
+
+	#help #help-content ol li {
+		font-size:1.8rem;
+		line-height:2.0rem;
+		margin:0 0 25px;
+		padding-left:50px;
+		padding-top:15px;
+		background-size:9%;
+	}
+
+	/* game pages */
+	
+	div.gintro #billboard {
+		background:transparent url(/img/game/mobile-red-background.jpg) left top repeat;
+		
+	}
+	
+	div.gamelogo {
+		width:100px;
+		height:73px;
+		display:block;
+		background:transparent url(/img/game/logo/intro-logo-mobile.png) left top no-repeat;
+		background-size:contain;
+		margin:2% auto;
+	}
+	
+	.g-intro-copy {
+		width:70%;
+		margin:30px 15%;
+		left:0px;
+		top:0px;
+	}
+
+	.g-intro-copy .normalbutton {
+		float:left;
+		margin-top:0px;
+		width:160px;
+		height:50px;
+		
+	}
+
+	.g-intro-copy .normalbutton a {
+		font-size:3rem;
+		line-height:233%;
+		background-color:#fee1e1;
+		height:50px;
+	}
+
+	.g-intro-copy .normalbutton.first {
+		margin-right:20px;
+	}
+
+	
+/*div.g-instructions {
+	width:610px;
+	height:330px;
+	overflow:hidden;
+	margin: -65px auto 0 auto;
+
+	transform: scale(0.8);
+	-webkit-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+}
+
+div.slideholder {
+	width:3600px;
+	height:330px;
+	position:relative;
+}
+
+div.slide {
+	width:540px;
+	height:220px;
+	float:left;
+}
+
+div.slide img {
+	margin:20px auto;
+	display:block;
+	width:591px;
+}
+div.slide img.arrow {
+	width:15px;
+	height:22px;
+	position:relative;
+	top:110px;
+}
+
+div.slide img.arrow.left {
+	left:-250px;
+	cursor:pointer;
+}
+
+div.slide img.arrow.right {
+	left:250px;
+	cursor:pointer;
+}
+
+div.slide img.arrow.right.higher {
+	left:250px;
+	top:70px;
+}
+
+div.playgamenow {
+	position:relative;top:175px;left:420px;
+}
+div.playgamenow a {
+	background-color:#fee1e1;
+}
+
+#gislide1 {
+	background:transparent url(/img/game/instructions/mobintro1.png) center center no-repeat;
+	background-size:100%;
+}
+#gislide2 {
+	background:transparent url(/img/game/instructions/mobintro2.png) center center no-repeat;
+	background-size:100%;
+}
+#gislide3 {
+	background:transparent url(/img/game/instructions/mobintro3.png) center center no-repeat;
+	background-size:100%;
+}
+#gislide4 {
+	background:transparent url(/img/game/instructions/mobintro4.png) center center no-repeat;
+	background-size:100%;
+}
+*/.g-intro-copy .normalbutton.levelmarketbutton {
+	left:320px;
+	margin-bottom:-150px;
+}
+.g-intro-copy.center {
+	margin:-50px 10%;
+	padding-top:50px;
+	width:80%;
+}
+.levelslot {
+	margin:5px 0px;
+}
+.g-intro-copy .normalbutton.levelmarketbutton {
+	margin-bottom:-150px;
+	width:125px;
+}
+
+.g-intro-copy .normalbutton.results {
+	width:108px;
+}
+.g-intro-copy .normalbutton.results a {
+	font-size:2.5rem;
+	line-height:275%;
+}
+
+.results_menu, .results_market, .results_level {
+	margin-right:15px;
+}
+	
+.g-intro-copy.wide {
+	text-align:center;
+	width:480px;
+	margin-left:8%;
+	margin-top:10px;
+}
+	
+#billboard p.mt50 { margin-top:30px; }
+
+#billboard p.savedcoinsonline {
+	margin:0px;
+}
+
+	.marketstall #bgextras {
+		display:none;
+	}
+	
+	.marketstall #marketstall {
+		width: 100%;
+		height: 100%;
+		margin-top:0px;
+		margin-left:0px;
+		padding-left:15px;
+		padding-right:15px;
+		top:0;
+		left:0;
+		position:absolute;
+		padding-top:0;
+		background:#f7f7f6 url(/img/page-bg/marketstall-phone.png) left top repeat-x;
+		background-size:cover;
+	}
+
+	div.gintro div#marketstall h1 {
+		font-size:11rem;
+		margin-top:25px;
+	}
+	
+	#marketstall p {
+		font-size:2.4rem;
+	}
+
+	#marketcarousel {
+		width:100%;
+		margin-top:5px;
+		height:120px;
+	}
+	div.mc_viewport {
+		width:380px;
+		margin:0 auto;
+	}
+	.mc_controls {
+		
+	}
+	
+	.mc_controls div.arrl {
+		left:8%;
+		top:-66px;
+	}
+	.mc_controls div.arrr {
+		left:88%;
+		top:-90px;
+	}
+	
+	div.carouselitem {
+		display:block;
+		width:70px;
+		height:85px;
+		margin:0px 3px;
+		padding:0px;
+		float:left;
+	}
+
+	div.carouselitem div.imghold {
+		width:60px;
+		height:60px;
+		display:block;
+		overflow:hidden;
+	}
+	
+	div.carouselitem div.imghold img {
+		width:60px;
+		height:auto;
+	}
+
+	span.carouseloption {
+		color:#ff0000;
+		text-align:center;
+		width:60px;
+	}
+
+	#marketstall #backbutton {
+		left:20px;
+		bottom:20px;
+	}
+	
+	#backbutton img {
+		width:8px;
+		height:auto;
+	}
+	
+	#marketstall #backbutton p {
+		color:#ff0000;
+	}
+
+	#marketstall h1 {
+		margin-left:0px;
+		margin-top:-10px;
+	}
+	
+}
+
+@media (max-width: 480px) { 
+	html {
+		font-size:35%;
+	}
+	
+	body {
+		-webkit-text-size-adjust: 100%;
+	}
+
+
+	#calculator .character {
+	}
+
+	#tape-measure {
+/*		margin-left: 135px;
+		top: 51.5%;*/
+	}
+	
+	#rotateoverlay h1 {
+		font-size:3.5rem;
+		margin-top:55px;
+		margin-left:-45px;
+	}
+	
+	#rotateoverlay h2 {
+		font-size:1.5rem;
+		margin-left:-110px;
+	}
+	
+	.normalbutton {
+	}
+	
+	.normalbutton a, .normalbutton input[type="submit"] {
+
+	}
+	
+	#background {
+		background-size:20px 450px;
+	}
+	
+	#home #introcontainer {
+		width: 50%;
+		height:130px;
+		top:0;
+		left:0;
+		margin-left:25px;
+		margin-top:0;
+	}
+	
+	#home h1 {
+		font-size:8rem;
+		letter-spacing:-3px;
+		text-align: right;
+		margin-right: 30px;
+	}
+	
+	#home #introtextcontainer {
+		width:180px;
+		margin-right:0px;
+		margin-top: 0;
+	}
+	
+	#home #maintext {
+		letter-spacing:-0.5px;
+		width:85%;
+	}
+	
+	#home #introtextcontainer h2 {
+		margin:0;
+		letter-spacing:-0.5px;
+	}
+	
+	#home #startbutton {
+		margin-top:0;
+	}
+	
+	#home #loginline {
+		margin-top:0;
+		letter-spacing:-0.5px;
+		clear:both;
+	}
+	
+	#home #bush, #home #character, #home #sign, #home #tree {
+		background-size:25%;
+	}
+	
+	#home #bush {
+		top:-72px;
+		left:-580px;
+	}
+	
+	#home #character {
+		top:-140px;
+		left:-30px;
+	}
+	
+	#home #sign {
+		top:-98px;
+		left:-7px;
+	}
+	
+	#home #tree {
+		top:-292px;
+		left:-85px;
+	}
+	
+	.billboard #bgextras {
+		display:none;
+	}
+	
+	.billboard #billboard {
+		width: 100%;
+		height: 100%;
+		margin-top:0px;
+		margin-left:0px;
+		padding-left:15px;
+		padding-right:15px;
+		top:0;
+		left:0;
+		position:absolute;
+		background:#f31b0f;
+		padding-top:0;
+	}
+	
+	.billboard #billboard h1 {
+		font-size:5rem;
+	}
+	
+	.billboard #billboard h1.large {
+		font-size:9rem;
+	}
+	
+	.billboard #billboard h2 {
+		font-size:1.8rem;
+		letter-spacing:-0.5px;
+	}
+	
+	#user form #fields, #login form #fields, #signup form #fields, #secret form #fields {
+		width: 90%;
+		height: 100px;
+		position: absolute;
+		top: 30%;
+		left: 5%;
+		margin-left: 0px;
+		margin-top: 10px;
+	}
+	
+	#user form .grid2col {
+		height:35px;
+	}
+	
+	#secret form #error, #user form #error {
+		left: 240px;
+		top: 75px;
+	}
+
+	#signup form #error {
+		top: 65px;
+		left: 245px;
+		width: 200px;
+	}
+	
+	#forgot form #error {
+		top:40px;
+		left:240px;
+		width:180px;
+	}
+
+	#goals #billboard p {
+		width:70%;
+	}
+	
+	label.insidelabel input, .inputbox {
+		font-size:2.5rem;
+		letter-spacing:-0.5px;
+		padding:0 0 0 3px;
+		height:30px;
+		margin-bottom:0;
+	}
+	
+	#billboard #backbutton {
+		left:5%;
+		bottom:10px;
+	}
+	
+	#backbutton img {
+		width:8px;
+		height:auto;
+	}
+	
+	#billboard #nextbutton {
+		right:5%;
+		bottom:15px;
+	}
+
+	#signup form label span {
+		padding-top:10px;
+	}
+	
+	input[type="submit"] {
+		min-width:70px;
+		
+	}
+
+	label.insidelabel span, #question-form label.insidelabel span {
+		font-size: 2.5rem;
+		letter-spacing: -0.5px;
+		padding: 0 0 0 3px;
+		height: 30px;
+		margin-bottom: 0;
+		line-height: 0px;
+	}
+
+	#question-form label.insidelabel span{
+		line-height: 20px;
+	}
+
+	#user #age {
+		font-size:2.5rem;
+	}
+
+	#allsliders{
+		top:0px;
+	}
+
+	#slider-help-panel p {
+		font-size: 1.4rem;
+	}
+
+	#goal-setup #goalscontainer{
+		width:480px;
+		left: 0;
+		margin-left: 0;
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+
+	#goal-setup #goalscontainer p {
+		line-height: 2rem;
+		font-size: 2.4rem;
+		width:90%;
+	}
+	
+	#goal-setup #goalscontainer .goal {
+		width: 145px;
+		height: auto;
+	}
+
+	.grid2col .column {
+		width: 70%;
+	}
+
+	.grid2col .last {
+		width: 20%;
+	}
+
+	#secret .grid2col .last{
+		width: 50%;
+	}
+
+	#goals-form-container .grid2col .column, #login-form .grid2col .column, #signup-form .grid2col .column, #user-creation .grid2col .column, #secret .grid2col .column{
+		width: 50%;
+	}
+
+	/* CALCULATOR */
+
+	#calculator {
+		/* width:200%; */
+	}
+	
+	#calculator #machine {
+		top: 15%;
+	}	
+	
+	#calculator #play-sign {
+		left: -115px;
+		bottom:-40px;
+	}
+	
+	#calculator #play-sign .no-ajaxy {
+		right:120px;
+		top:8px;
+	}
+	
+	#calculator #play-sign img {
+		width:30%;
+		height:auto;
+	}
+	
+	#calculator #play-sign .no-ajaxy img {
+		width:80%;
+	}
+
+	#machine-tank {
+	}
+	
+	#machine-tank-middle {
+	}
+	
+	#machine-tank-cover {
+	}
+
+	#machine-base{
+		bottom: 5%;
+	}
+	
+	#middle-cog {
+	}
+
+	#right-cog{
+		bottom: 9.75%;
+	}
+
+	#interest-container {
+		top: 72%;
+	}
+	
+	#total-interest {
+	}
+	
+	#interest-rates span {
+	}
+
+	#interest-selector {
+	}
+
+	#interest-label p{
+		font-size: 1.55rem;
+		margin: 15%;
+	}
+	#total-label p {
+	}
+
+	#side-buttons {
+	}
+	
+	.side-button {
+	}
+
+	#total-container #byage p {
+	}
+
+	#total-container #age p {
+	}
+
+	#age-fraction p {
+	}
+	
+	#calculator #bush {
+		display: none;
+	}
+
+	#calculator #bush2 {
+		display: none;
+	}
+
+	.slider-container {
+	}
+	
+	.slider-container input[type="number"] {
+		line-height:15px;
+		width:80%;
+		padding-left:6px;
+	}
+
+	/* END CALCULATOR */
+
+	
+	
+	
+	
+	/*CHARACTER*/
+
+	#character .character {
+		position: relative;
+		margin: 40px auto 0 25px;
+	}
+
+	.hotspot {
+		width: 30px;
+		height: 30px;
+		margin-left:-15px;
+		margin-top:-15px;
+	}
+
+	#character #bottomhotspot {
+		margin-top:-20px;
+	}
+
+	#disclaimercontainer {
+		left: 15px;
+		bottom: 4px;
+	}
+	
+
+	/* game pages */
+	
+	.g-intro-copy {
+		width:440px;
+		margin-left:0px;
+		margin-top:0px;
+
+	}
+	
+	.g-intro-copy .normalbutton {
+		float:left;
+		margin-top:0px;
+		width:195px;
+		height:50px;
+	}
+
+	.g-intro-copy .normalbutton a {
+		font-size:3rem;
+		line-height:233%;
+		background-color:#fee1e1;
+		height:45px;
+	}
+
+	.g-intro-copy .normalbutton.first {
+		margin-right:15px;
+		margin-left:5px;
+	}
+
+/*	div.g-instructions {
+		width:470px;
+		height:240px;
+		overflow:hidden;
+		margin: 0px 0px 0px -15px;
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+	}
+
+	div.slideholder {
+		width:3600px;
+		height:230px;
+		position:relative;
+	}
+
+	div.slide {
+		width:470px;
+		height:250px;
+		float:left;
+	}
+
+	div.slide img {
+		margin:20px auto;
+		display:block;
+		width:591px;
+	}
+	div.slide img.arrow {
+		width:15px;
+		height:22px;
+		position:relative;
+		top:70px;
+	}
+
+	div.slide img.arrow.left {
+		left:-220px;
+		cursor:pointer;
+	}
+
+	div.slide img.arrow.right {
+		left:220px;
+		cursor:pointer;
+	}
+
+	div.slide img.arrow.right.higher {
+		left:220px;
+		cursor:pointer;
+		top:30px;
+	}
+
+	div.playgamenow {
+		position:relative;top:145px;left:320px;
+	}
+	div.playgamenow a {
+		background-color:#fee1e1;
+	}
+
+	#gislide1 {
+		background:transparent url(/img/game/instructions/mobintro1.png) center center no-repeat;
+	}
+	#gislide2 {
+		background:transparent url(/img/game/instructions/mobintro2.png) center center no-repeat;
+	}
+	#gislide3 {
+		background:transparent url(/img/game/instructions/mobintro3.png) center center no-repeat;
+	}
+	#gislide4 {
+		background:transparent url(/img/game/instructions/mobintro4.png) center center no-repeat;
+	}*/
+
+
+	.g-intro-copy.center {
+		margin:0;
+		width:430px;
+		padding-top:0px;
+		left:0px;
+	}
+	.levelslot {
+		margin:0px 0px;
+	}
+
+	#levelholder {
+		width:440px;
+	}
+
+	#level1slot.available {
+		background:transparent url(/img/game/levelselect/level_1_open.png) center 8px no-repeat;
+		margin-right:5px;
+	}
+	#level2slot.available {
+		background:transparent url(/img/game/levelselect/level_2_open.png) center 8px no-repeat;
+		margin-right:5px;
+	}
+	#level3slot.available {
+		background:transparent url(/img/game/levelselect/level_3_open.png) center 8px no-repeat;
+	}
+	#level1slot.unavailable {
+		background:transparent url(/img/game/levelselect/level_1_closed.png) center center no-repeat;
+		margin-right:5px;
+	}
+	#level2slot.unavailable {
+		background:transparent url(/img/game/levelselect/level_2_closed.png) center center no-repeat;
+		margin-right:5px;
+	}
+	#level3slot.unavailable {
+		background:transparent url(/img/game/levelselect/level_3_closed.png) center center no-repeat;
+	}
+
+	.g-intro-copy .normalbutton.levelmarketbutton {
+		margin-top:-12px;
+		margin-bottom:-60px;
+	}
+
+	.g-intro-copy .normalbutton.results {
+		width:102px;
+		margin-bottom:-10px;
+	}
+
+	.results_menu, .results_market, .results_level {
+		margin-right:7px;
+	}
+	.g-intro-copy.wide {
+		text-align:center;
+		width:100%;
+		margin-left:0;
+		margin-top:20px;
+	}
+
+	.marketstall #bgextras {
+		display:none;
+	}
+	
+	.marketstall #marketstall {
+		width: 100%;
+		height: 100%;
+		margin-top:0px;
+		margin-left:0px;
+		padding-left:15px;
+		padding-right:15px;
+		top:0;
+		left:0;
+		position:absolute;
+		padding-top:0;
+		background:#f7f7f6 url(/img/page-bg/marketstall-phone.png) left top no-repeat;
+	}
+
+	.marketstall #marketstall h1 {
+		font-size:12rem;
+		margin-top:25px;
+	}
+	
+	#marketstall p {
+		font-size:2.4rem;
+	}
+
+	#marketcarousel {
+		width:100%;
+		margin-top:5px;
+		height:100px;
+	}
+	div.mc_viewport {
+		width:380px;
+		margin-left:35px;
+	}
+	.mc_controls {
+		
+	}
+	
+	.mc_controls div.arrl {
+		left:0px;
+		top:-82px;
+	}
+	.mc_controls div.arrr {
+		left:409px;
+		top:-105px;
+	}
+	
+	div.carouselitem {
+		display:block;
+		width:70px;
+		height:85px;
+		margin:0px 3px;
+		padding:0px;
+		float:left;
+	}
+
+	div.carouselitem div.imghold {
+		width:60px;
+		height:60px;
+		display:block;
+		overflow:hidden;
+	}
+
+	span.carouseloption {
+		color:#ff0000;
+		text-align:center;
+		width:60px;
+	}
+
+
+	#marketstall #backbutton {
+		left:20px;
+		bottom:20px;
+	}
+	
+	#backbutton img {
+		width:8px;
+		height:auto;
+	}
+	
+	#marketstall #backbutton p{
+		color:#ff0000;
+	}
+	
+	div.carouselitemholder {
+		margin-top:10px;
+	}
+	
+}
+

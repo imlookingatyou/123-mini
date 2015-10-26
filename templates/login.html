@@ -1,0 +1,39 @@
+<div id="login" class="data page billboard">
+	<div id='billboard'>
+		<h1>Welcome back.</h1>
+		<form id="login-form" method="post" action="/ajax/login">
+			<div id="fields">
+				<div class="grid2col">
+					<div class="column">
+						<p>Type in your username and password to go to your 1I2I3 Mini Calculator.</p>
+						<p>Forgotten <a href='/forgot'>login details</a>?</p>
+					</div>
+					<div class="column last">
+						<label for="username" class="insidelabel">
+							<span>username</span>
+							<input type="text" name="username" id="username" value="" data-type="username" class="inputbox"/>
+						</label>
+						<br />
+						<label for="password" class="insidelabel">
+							<span>password</span>
+							<input type="password" name="password" id="password" value="" data-type="password" class="inputbox" autocomplete="off" />
+						</label>
+					</div>
+				</div>
+			</div>
+			<div id="buttons">
+				<div id='backbutton' class='back-button'>
+					<a href='javascript:window.history.back()'><img src='/img/back-arrow.png'/><p>Back</p></a>
+				</div>
+				<div id='nextbutton' class='normalbutton inversebuttoncolors'>
+					<input type="submit" value="Submit" id="submit" name="submit" />
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div id='bgextras'>
+		<div id='billboardbush' class='bgelement'></div>
+		<div id='tree' class='bgelement'></div>
+	</div>
+</div>

@@ -1,0 +1,49 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$user = array();
+	$userSet = false;
+	if(isset($_SESSION['user'])) {
+		$userSet = true;
+		$user = $_SESSION['user'];
+	} else {
+		$user = array('level' => 1, 'coins' => 0);
+	}
+?>
+<div id="user" class="data page billboard gintro">
+	<div id='billboard'>
+			<div class="gamelogo"></div>
+		
+			<div class="g-intro-copy">
+				<?php if($userSet == false) {
+				?>
+					<p>Welcome to the preview of the Mini Jets game! Collect coins against the clock and see how much you can save!<br />For full access to the game click <a href="/user">here</a>.</p>
+				<?php
+				} else {
+				?>
+					<p>Welcome to Mini Jets! Collect coins against the clock and see how much you can save!<br/>Spend your savings at the <strong>Mini Market</strong> where you can buy exclusive accessories for your <strong>Mini Me</strong>.</p>
+				<?php
+				}
+				?>
+				<div class='normalbutton inversebuttoncolors first'>
+					<a href="/game/instructions">How to play</a>
+				</div>
+				<div class='normalbutton inversebuttoncolors'>
+					<a href="/game/levelselect">Play</a>
+				</div>
+			</div>
+		
+			<div id="buttons">
+				<div id='backbutton' class='back-button'>
+					<a onclick="history.back(-1)" href="#"><img src='/img/back-arrow.png'/><p>Back</p></a>
+				</div>
+			</div>
+			
+	</div>
+	
+	<div id='bgextras'>
+		<div id='billboardbush' class='bgelement'></div>
+		<div id='tree' class='bgelement'></div>
+	</div>
+</div>

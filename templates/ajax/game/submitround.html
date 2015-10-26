@@ -1,0 +1,36 @@
+<?php
+
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$data = $_POST;
+	
+	$game = new Game();
+	if(isset($_SESSION['user'])) {
+		$user = $_SESSION['user'];	
+	} else {
+		$_SESSION['lastplay'] = array(
+			'coinsearned' => $data['coinsearned'],
+			'level' => $data['level'],
+			'finished' => $data['finished']
+		);
+		echo json_encode(array('success' => 0, 'reason' => 'You must be logged in to submit a score'));
+		exit;
+	}
+	
+	$values = array(
+		'userid' => $user['id'],
+		'coinsearned' => $data['coinsearned'],
+		'level' => $data['level'],
+		'finished' => $data['finished']
+	);
+	$result = $game->addPlay($values);
+	
+	if(!$result) {
+		echo json_encode(array('success' => 0, 'reason' => 'An error occurred'));
+	} else {
+		$_SESSION['lastplay'] = $values;
+		$_SESSION['user']['coins'] = $_SESSION['user']['coins'] + $values['coinsearned'];
+		echo json_encode(array('success' => 1));
+	}
+?>

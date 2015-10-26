@@ -1,0 +1,21 @@
+<?php
+	$data = $_POST;
+	
+	$calc = new Calculator();
+	$goals = $calc->getGoals($data['id']);
+	
+	$goals[($data['goal']-1)] = array(
+		'name' => $data['name'],
+		'cost' => $data['cost'],
+		'icon' => $data['icon']
+	);
+	
+	$success = $calc->updateGoals(array('goals' => $goals, 'userID' => $data['id']));
+	if($success == true) {
+		session_start();
+		$_SESSION['user']['goals'] = $goals;
+		echo 1;
+	} else {
+		echo json_encode(array('error' => 1));
+	}
+?>

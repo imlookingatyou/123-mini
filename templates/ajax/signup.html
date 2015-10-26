@@ -1,0 +1,39 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$data = $_POST;
+	
+	if(isset($data['ajax'])) {
+		$_SESSION['ajax'] = true;
+	} else {
+		$_SESSION['ajax'] = false;
+	}
+	
+	if($data['username'] == "" && $data['password'] == "") {
+		$_SESSION['loggedin'] = false;
+		$_SESSION['user'] = $data;
+	} else {
+		$calc = new Calculator();
+	
+		$user = $calc->signup($data);
+	
+		if(!is_int($user)) {
+			echo json_encode(array('success' => 0, 'error' => $user['error']));
+		} else {
+			$_SESSION['loggedin'] = true;
+			$data = array_merge($data, array('coins' => 0, 'totalearned' => 0, 'totalspent' => 0, 'level' => 1, 'skin' => $data['head']));
+			if(!isset($data['accessories'])) {
+				$data['accessories'] = 0;
+			}
+			$_SESSION['user'] = $data;			
+			$_SESSION['user']['id'] = $user;
+			if($_SESSION['ajax'] == false) {
+				header('Location: /calculator');
+			} else {
+				echo json_encode(array('success' => 1, 'userId' => $user));
+			}
+		}
+	}
+	exit;
+?>

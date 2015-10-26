@@ -1,0 +1,95 @@
+
+@media only screen and (min-width : 321px) and (max-width : 768px) and (max-height: 680px) {
+	/* smart phones */
+
+		html, body {
+			min-width: 0px; 
+			min-height: 255px;
+		}
+		.center-box {
+			font-size: 5px;
+			width: 55%;
+			top: 6%;
+			left: -12%;
+		}
+		h1 {
+			font-size: 6em;
+		}
+
+		h2 {
+			font-size: 2em;
+		}
+
+		p {
+			padding-left: 30%;
+			width: 70%;
+			font-size: 1.5em;
+		}
+		p.paragraphDesktop {
+			display: none;
+		}
+		p.paragraphMobile {
+			display: block;
+		}
+
+		h1 {
+			font-size: 7em;
+			margin: 0 auto;
+			text-align: right;
+			letter-spacing: -3px;
+		}
+
+		.boy {
+			width: 38%;
+			bottom: -9%;
+			left: -20%;
+		}
+
+		.bigbush {
+			width: 55%;
+		}
+		.bigbush img {
+			max-width: 337px;
+		}
+		.one .bigbush img {
+			left: -55%;
+		}
+		.boy img {
+			left: 5%;
+			bottom: -15%;
+		}
+		.lamplinks {
+			left: 70%;
+			max-width: 200px;
+		}
+		.sun {
+			max-width:130px;
+		}
+		.game {
+			max-width: 290px;
+		}
+		.calculator {
+			max-width: 290px;
+		}
+		.video {
+			max-width: 290px;
+		}
+		.video2 {
+			max-height: 174px;
+		}
+		.tree {
+			max-width: 200px;
+		}
+		.grass {
+			background-size: 2%;
+		}
+
+		.video div.video2 img.board_left, .video div.video2 img.board_right {
+			max-height: 192px;
+			min-height: 192px;
+		}
+
+		.video iframe {
+			max-height: 192px;
+			min-height: 192px;
+		}

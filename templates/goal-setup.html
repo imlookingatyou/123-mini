@@ -1,0 +1,78 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$goal = array();
+	if(isset($_SESSION['user']) && isset($_SESSION['user']['goals'][intval(str_replace('/goals/', '', $_SERVER['REQUEST_URI'])) - 1])) {
+		$goal = $_SESSION['user']['goals'][intval(str_replace('/goals/', '', $_SERVER['REQUEST_URI'])) - 1];
+	} else {
+		$goal = array('icon' => 1);
+	}
+	
+	$icons = 17;
+?>
+<div id="goal-setup" class="page billboard">
+	<div id='billboard'>
+		<h1>Your Goal.</h1>
+		<h2>Tell us what you’re saving for.</h2>
+		<form id="goal-form" name="goals-form" action="/ajax/goal-setup" method="post">
+			<div id='goalscontainer'>
+				<div id="goals-form-container">
+					<div class="grid2col">
+						<div class="column">
+							<label for="name" class="insidelabel">
+								<span>What's your goal?</span>
+								<input type="text" name="name" id="name" value="<?php if(isset($goal['name'])) { echo $goal['name']; } ?>" data-type="goal" />
+							</label>
+						</div>
+						<div class="column last">
+							<span class="numberpound">£</span>
+							<label for="cost" class="insidelabel">
+								<span id="cost-label">How much does it cost?</span>
+								<input type="text" name="cost" id="cost" value="<?php if(isset($goal['cost'])) { echo $goal['cost']; } ?>" data-type="price" />
+							</label>
+						</div>
+					</div>
+					
+					<p><label for="icon">Pick a badge to pin to your goal.</label></p>
+					<div class="grid3col">
+						<div class="column first">
+							<a href="#" id="acc-prev" class="no-ajaxy"><img src="/img/goals/prev-arrow.png" alt="Previous" /></a>
+						</div>
+						<div id="icons" class="column">
+							<div id="iconContainer">
+							<?php
+								$count = 1;
+								do {
+									$checked = "";
+									if(!empty($goal) && $goal['icon'] == $count) {
+										$checked = " checked='checked'";
+									}
+									echo '<input type="radio" name="icon" id="icon-'.$count.'" value="'.$count.'" data-type="radio"'.$checked.' /><label for="icon-'.$count.'"><img src="/img/goals/goal-'.$count.'.png" alt="Icon '.$count.'" /></label>';
+									$count++;
+								} while($count <= $icons);
+							?>
+							</div>
+						</div>
+						<div class="column last">
+							<a href="#" id="acc-next" class="no-ajaxy"><img src="/img/goals/next-arrow.png" alt="Next" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="buttons">
+				<div id='backbutton' class='back-button'>
+					<a href='javascript:window.history.back()'><img src='/img/back-arrow.png'/><p>Back</p></a>
+				</div>
+				<div id='nextbutton' class='normalbutton inversebuttoncolors'>
+					<input type="submit" name="submit" id="submit" value="Submit goal" />
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div id='bgextras'>
+		<div id='billboardbush' class='bgelement'></div>
+		<div id='tree' class='bgelement'></div>
+	</div>
+</div>

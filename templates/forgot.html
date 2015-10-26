@@ -1,0 +1,54 @@
+<div id="forgot" class="data page billboard">
+	<div id='billboard'>
+		<h1>Hold on.</h1>
+		<form id="forgot-form" method="post" action="">
+			<div id="fields">
+				<div class="grid2col">
+					<div class="column">
+						<label for="username"><p>Your username is:</p></label>
+					</div>
+					<div class="column last">
+						<input type="text" name="username" id="username" value="" data-type="username" class="inputbox"/>
+					</div>
+				</div>
+				<div id="get-question" class='normalbutton inversebuttoncolors'>
+					<input type="button" value="Get question" id="get-question-submit" name="submit" />
+				</div>
+				<div id="question-section">
+					<div class="grid2col">
+						<div class="column">
+							<p>Your secret question is:</p>
+						</div>
+						<div class="column last">
+							<p id="question" data-question="1"></p>
+						</div>
+					</div>
+					<div class="grid2col">
+						<div class="column">
+							<label for="username"><p>And your answer is:</p></label>
+						</div>
+						<div class="column last">
+							<input type="text" name="answer" id="answer" value="" data-type="answer" class="inputbox"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="buttons">
+				<div id='backbutton' class='back-button'>
+					<a href='javascript:window.history.back()'><img src='/img/back-arrow.png'/><p>Back</p></a>
+				</div>
+				<div id='continuebutton' class='linkButton'>
+					<a href='/calculator' class='no-ajaxy'><p>No, thanks</p></a>
+				</div>
+				<div id='nextbutton' class='normalbutton inversebuttoncolors'>
+					<input type="submit" value="Start saving" id="submit" name="submit" />
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div id='bgextras'>
+		<div id='billboardbush' class='bgelement'></div>
+		<div id='tree' class='bgelement'></div>
+	</div>
+</div>

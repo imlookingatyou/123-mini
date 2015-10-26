@@ -1,0 +1,83 @@
+<?php
+	$levels = 3;
+
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$user = array();
+	$userSet = false;
+	if(isset($_SESSION['user'])) {
+		$userSet = true;
+		$user = $_SESSION['user'];
+	} else {
+		$user = array('level' => 1, 'coins' => 0);
+	}
+?>
+<div id="user" class="data page billboard gintro">
+	<div id='billboard'>
+			<h1 class="large">Choose level</h1>
+		
+			<div class="g-intro-copy center">
+			<?php 
+			if($userSet == false) {
+			?>
+				<p>Level 1.  Start flying and get saving!</p>
+			<?php
+			} else {
+			?>
+				<p>Coins are worth more the further you go!</p>
+			<?php
+			}
+			?>
+
+			<div id="levelholder">
+				<?php
+					for($i=0; $i < $levels; $i++) {
+						$avail = ($user['level'] >= $i+1) ? 'available' : 'unavailable';
+						echo '<div id="level'.($i+1).'slot" class="levelslot '.$avail.'">';
+						echo '<a href="/game/play?level='.($i+1).'" class="no-ajaxy"><!--//--></a>';
+						if($avail == "unavailable") {
+							echo '<span class="alttext">Buy this in the market</span>';
+						}
+						echo '</div>';
+					}
+				?>
+			</div>
+			
+			<?php 
+			if($userSet == false) {
+			?>
+				<p>If you want us to remember your totals and unlock more levels to the game please go to the 123 Mini Calculator <a href="/home">here</a> and create a username and password.</p>
+			<?php
+			} else {
+			?>
+				<p class="savedcoinsline">So far, you have saved <span class="coins"><?php echo $user['coins']; ?></span></p>
+				<p>Start flying and get saving!</p>
+			<?php
+			}
+			?>	
+			
+			</div>
+		
+			<div id="buttons">
+				<div id='backbutton' class='back-button'>
+					<a href='javascript:window.history.back()'><img src='/img/back-arrow.png'/><p>Back</p></a>
+				</div>
+				<?php 
+				if($userSet == true) {
+				?>
+				<div id="nextbutton" class='normalbutton inversebuttoncolors'>
+					<a href="/game/market">Market</a>
+				</div>
+				<?php
+				}
+				?>
+			</div>
+			
+	</div>
+	
+	<div id='bgextras'>
+		<div id='billboardbush' class='bgelement'></div>
+		<div id='tree' class='bgelement'></div>
+	</div>
+</div>

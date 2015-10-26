@@ -1,0 +1,41 @@
+<div id="reset" class="data page billboard">
+	<div id='billboard'>
+		<h1>Hold on.</h1>
+		<form id="reset-form" method="post" action="/ajax/resetpassword">
+			<div id="fields">
+				<div class="grid2col">
+					<div class="column">
+						<label for="password"><p>New password:</p></label>
+					</div>
+					<div class="column last">
+						<input type="password" name="password" id="password" value="" data-type="password" class="inputbox"/>
+					</div>
+				</div>
+				<div class="grid2col">
+					<div class="column">
+						<label for="retype"><p>Re-type password:</p></label>
+					</div>
+					<div class="column last">
+						<input type="password" name="retype" id="retype" value="" data-type="retype" class="inputbox"/>
+					</div>
+				</div>
+			</div>
+			<div id="buttons">
+				<div id='backbutton' class='back-button'>
+					<a href='javascript:window.history.back()'><img src='/img/back-arrow.png'/><p>Back</p></a>
+				</div>
+				<div id='continuebutton' class='linkButton'>
+					<a href='/calculator' class='no-ajaxy'><p>No, thanks</p></a>
+				</div>
+				<div id='nextbutton' class='normalbutton inversebuttoncolors'>
+					<input type="submit" value="Reset password" id="submit" name="submit" />
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div id='bgextras'>
+		<div id='billboardbush' class='bgelement'></div>
+		<div id='tree' class='bgelement'></div>
+	</div>
+</div>

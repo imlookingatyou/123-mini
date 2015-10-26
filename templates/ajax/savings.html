@@ -1,0 +1,14 @@
+<?php
+	$data = $_POST;
+	foreach($data as $key => $value) {
+		$data[$key] = floatval($value);
+	}
+	
+	$calc = new Calculator();
+	$calc->updateSavings($data);
+	
+	session_start();
+	foreach($data as $key => $value) {
+		$_SESSION['user'][$key] = $value;
+	}
+?>

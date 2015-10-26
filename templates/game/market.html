@@ -1,0 +1,83 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$user = array();
+	if(isset($_SESSION['user'])) {
+		$user = $_SESSION['user'];
+	} else {
+		$user = array('level' => 1, 'coins' => 0, 'id' => 0);
+	}
+	
+	$game = new Game();
+	$accessories = $game->getMarketAccessories();
+	$userAcc = $game->getUserAccessories($user['id']);
+?>
+<div id="market" class="data page marketstall gintro">
+	<div id='marketstall'>
+			<h1 class="large">Mini Market</h1>
+		
+			<div class="market-copy">
+				
+			<p>Spend your coins wisely, or keep playing to save for the things you want.<br/>
+			To get locked items, buy a key to unlock the next level.</p>
+			
+			<p>So far, you've saved <span class="coins"><?php echo $user['coins']; ?></span></p>
+			
+			<div id="marketcarousel">
+			<div class="mc_viewport">
+				<div class="carouselitemholder">
+				<?php
+					$i = 1;
+					foreach($accessories as $accessory) {
+						echo '<div class="carouselitem" data-accessory="'.$accessory['id'].'" data-price="'.$accessory['price'].'" data-level="'.$accessory['keyrequired'].'" id="item'.$i.'">';
+						if($accessory['keyrequired'] > $user['level']) {
+							echo '<div class="imghold"><img src="'.str_replace('.png', '-market_locked.png', $accessory['path']).'" alt=""/></div>';
+							echo '<span class="carouseloption active">Locked<br/>'.$accessory['price'].'</span>';
+						} else if($accessory['type'] == 'key' && in_array($accessory['id'], $userAcc)) {
+							echo '<div class="imghold"><img src="'.str_replace('.png', '-market.png', $accessory['path']).'" alt=""/></div>';
+							echo '<span class="carouseloption active">Level unlocked!</span>';
+						} else if (isset($user['accessories']) && $user['accessories'] == $accessory['id']) {
+							echo '<div class="imghold"><img src="'.str_replace('.png', '-market.png', $accessory['path']).'" alt=""/></div>';
+							echo '<span class="carouseloption active">Wearing</span>';
+						} else if(in_array($accessory['id'], $userAcc)) {
+							echo '<div class="imghold"><img src="'.str_replace('.png', '-market.png', $accessory['path']).'" alt=""/></div>';
+							echo '<span class="carouseloption active"><a href="#" class="no-ajaxy wearnow">Wear now</a></span>';
+						} else if($accessory['price'] > $user['coins']) {
+							echo '<div class="imghold"><img src="'.str_replace('.png', '-market.png', $accessory['path']).'" alt=""/></div>';
+							echo '<span class="carouseloption active"><br/>'.$accessory['price'].'</span>';
+						} else {
+							echo '<div class="imghold"><img src="'.str_replace('.png', '-market.png', $accessory['path']).'" alt=""/></div>';
+							echo '<span class="carouseloption active"><a href="#" class="no-ajaxy unlock">Buy now<br/>'.$accessory['price'].'</a></span>';
+						}
+						echo '</div>';
+						
+						$i++;
+					}
+				?>
+				
+				</div>
+			
+			</div>
+			
+				<div class="mc_controls">
+					<div class="arrl"><img src="/img/game/market-arrow-left.png" alt="<"/></div>
+					<div class="arrr"><img src="/img/game/market-arrow-right.png" alt=">"/></div>
+				</div>
+			
+			</div>
+			</div>
+
+			<div id="buttons">
+				<div id='backbutton' class='back-button'>
+					<a href='/game/'><img src='/img/back-arrow.png'/><p>Back</p></a>
+				</div>
+			</div>
+			
+	</div>
+	
+	<div id='bgextras'>
+		<div id='billboardbush' class='bgelement'></div>
+		<div id='tree' class='bgelement'></div>
+	</div>
+</div>

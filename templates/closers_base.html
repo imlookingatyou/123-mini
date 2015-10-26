@@ -1,0 +1,144 @@
+<?php
+	if(isset($_SESSION['user'])) {
+		echo "<script>var userData = ".json_encode($_SESSION['user'])."; var loggedin = true; var signedup = true; var helpseen = true;</script>";
+	} else {
+		echo "<script>var userData = new Object; var loggedin = false; var signedup = false; var helpseen = false;</script>";
+	}
+
+	if($this->contentObj['url'] == "game/play") {
+	
+		if(isset($_SESSION['user'])) {
+			$user = $_SESSION['user'];
+			if($user['gender'] == 1) {
+				$user['head'] = $user['head'] + 4;
+				$user['hair'] = $user['hair'] + 4;
+			}
+		} else {
+			$user = array('head' => 1, 'hair' => 1, 'accessories' => 0);
+		}
+	
+		if(isset($_GET['level'])) {
+			$level = intval($_GET['level']);
+			if(!isset($user['level']) || $level > $user['level']) {
+				$level = 1;
+			}
+		} else {
+			$level = 1;
+		}
+?>
+
+<script src="/js/libs/jquery-1.10.2.min.js"></script>
+<script src="//code.createjs.com/easeljs-0.5.0.min.js"></script>
+<!-- script src='http://code.createjs.com/tweenjs-0.3.0.min.js'></script -->
+<script src='/js/libs/tweenjs/Ease.js'></script>
+<script src='/js/libs/tweenjs/Tween.js'></script>
+<script src='/js/game/ContentManager.js'></script>
+<script src='/js/game/SoundManager.js'></script>
+<script src='/js/game/Vehicle.js'></script>
+<script src='/js/game/Avatar.js'></script>
+<script src='/js/game/Player.js'></script>
+<script src='/js/game/ObstacleCloud.js'></script>
+<script src='/js/game/ObstacleImage.js'></script>
+<script src='/js/game/ItemObstacle.js'></script>
+<script src='/js/game/ItemMultiplier.js'></script>
+<script src='/js/game/ItemsManager.js'></script>
+<script src='/js/game/Coin.js'></script>
+<script src='/js/game/Cloud.js'></script>
+<script src='/js/game/Star.js'></script>
+<script src='/js/game/Background.js'></script>
+<script src='/js/game/FloatingAlert.js'></script>
+<script src='/js/game/Game.js'></script>
+
+<script type='text/javascript'>
+
+	window.addEventListener( 'orientationchange', onOrientationChange );	
+	
+	var gameInitialised = false;
+	var game;
+	
+	// initialise depending on orientation
+
+	onOrientationChange();
+				
+	function getWidth() {
+		return $(window).width();
+	}
+	function getHeight() {
+		return $(window).height();
+	}			
+	//+++ alert( getWidth() + "x" + getHeight() );
+	function tick() {
+		game.tick();
+	}
+	function initGame() { 
+		gameInitialised = true;
+
+		var width = getWidth();
+		var height = getHeight();
+		var canvasWidth = 0;
+		var canvasHeight = 0;
+
+		// little hack, sometimes the values are still inverted in tablets at this point, so inverse them back
+		// alert( "w " + getWidth() + " height " + getHeight() );
+		
+		//Ratio = 8:5
+		if(width > height) {
+			//height max;
+			if(height > 600) {
+				height = 600;
+			}
+			canvasHeight = height;
+			canvasWidth = (height / 5) * 8;
+		} else {
+			//width max;
+			if(width > 960) {
+				width = 960;
+			}
+			canvasHeight = (width / 8) * 5;
+			canvasWidth = width;
+		}
+
+		var canvas = document.getElementById("canvas"); 
+		canvas.width = canvasWidth;
+		canvas.height = canvasHeight;
+
+		game = new Game(canvasWidth, canvasHeight);
+		//	-> level, skinId, hairId, accessoryId
+		// game.Init(2,1,2,3);
+		game.Init(<?php echo $level.", ".$user['head'].", ".$user['hair'].", ".$user['accessories']; ?>);
+	}
+	function onOrientationChange() {
+		switch( window.orientation ) 
+		{  
+			case 0 :
+			case 180 :
+				if( gameInitialised ) {
+					game.pauseGame();
+				}
+				break; 
+
+			case -90 :
+			case 90 :
+			default:
+				// default needs to be this so it works for devices without orientation
+				if( !gameInitialised ) {
+					// do this on a timeout, since Android devices won't have the proper screen sizes immediately after rotating
+					window.setTimeout(function () { initGame(); },100 );					   
+					//+++ initGame();
+				} else {
+					game.unpauseGame();
+				}
+				break; 
+		}
+	}
+</script>
+<?php
+	} else {
+?>
+<script src="/js/libs/calcSoundManager.js"></script>
+<script data-main="/js/main" src="/js/libs/require.js"></script>
+<?php
+	}
+?>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$data = $_POST;
+	
+	$calc = new Calculator();
+	$character = $calc->updateCharacter($data);
+	if($character == true) {
+		foreach($data as $key => $value) {
+			$_SESSION['user'][$key] = $value;
+		}
+		echo 1;
+	} else {
+		echo json_encode(array('error' => 1));
+	}
+?>

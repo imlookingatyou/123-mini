@@ -1,0 +1,52 @@
+<VirtualHost *:80>
+    ServerName <%= domainName%>
+    ServerAlias www.<%= domainName%>
+    ServerAlias 123mini.co.uk
+    ServerAlias www.123mini.co.uk
+
+    ServerAdmin admin@localhost
+    DocumentRoot /var/www/<%= projectGroup%>/<%= projectName%>/current/web
+
+    LogFormat '%{X-Forwarded-For}i %l %u %t \'%r\' %>s %b \'%{Referer}i\' \'%{User-Agent}i\'' proxy
+    SetEnvIf X-Forwarded-For '^.*\..*\..*\..*' forwarded
+    CustomLog logs/www.santander123mini.co.uk/santander-123-mini-access.log combined env=!forwarded
+    CustomLog logs/www.santander123mini.co.uk/santander-123-mini-access.log proxy env=forwarded
+
+    ErrorLog logs/www.santander123mini.co.uk/santander-123-mini-error.log
+
+    Header always append X-Frame-Options SAMEORIGIN
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_METHOD} !^(GET|POST|HEAD)
+    RewriteRule .* - [R=405,L]
+
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^/(.*)$ http://www.123mini.co.uk/$1 [R=301,L]
+
+#    Removed because we use RackSpace LoadBalancer
+#    RewriteCond %{SERVER_PORT} 80
+#    RewriteRule ^(.*)$ https://www.123mini.co.uk/ [R,L]
+
+    <Directory /var/www/<%= projectGroup%>/<%= projectName%>/current/web>
+        AllowOverride all
+    </Directory>
+    AddType application/x-httpd-php .html
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerName <%= domainName%>
+    ServerAlias 123mini.co.uk
+    ServerAlias www.123mini.co.uk
+
+    ServerAdmin admin@localhost
+    DocumentRoot /var/www/<%= projectGroup%>/<%= projectName%>/current/web
+
+   # RewriteEngine On
+   # RewriteCond %{SERVER_PORT} 80
+   # RewriteRule ^(.*)$ https://www.123mini.co.uk/$ [R,L]
+
+#    SSLEngine On
+#    SSLCertificateFile      /etc/apache2/ssl/www.123mini.co.uk.crt
+#    SSLCertificateKeyFile   /etc/apache2/ssl/123mini.key
+#    SSLCertificateChainFile /etc/apache2/ssl/L1Kchainroot-chain-combo.txt
+</VirtualHost>

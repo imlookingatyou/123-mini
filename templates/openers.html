@@ -1,0 +1,27 @@
+<body class="<?php echo $this->contentObj['reglang']." ".str_replace('/', '-', $this->contentObj['url']); ?>">
+<?php if($this->contentObj['url'] != "game/play") { ?>
+<div id="mute">
+	<a href="#" class="no-ajaxy" id="mute-button"><img src="/img/sound_on.png" alt="Mute" id="mute-image" /></a>
+</div>
+<?php } ?>
+<div id="container" class="<?php echo $this->contentObj['reglang']; ?>">
+	<div id="accessibility"><a href="#main" accesskey="k">skip to content.</a></div>
+	
+	<div id="content">
+			<a name="main"></a>
+
+			<div id='rotateoverlay'>
+				<div id='rotateicon'></div>
+				<h1>Oops!</h1>
+				<h2>Please rotate your device to continue!</h2>
+				<div id='rotatecloud'></div>
+			</div>
+			
+			<div id='bg-extended'>
+				<div id='bg-sky'></div>
+				<div id='bg-ground'></div>
+			</div>
+			<div id='background'>
+			</div>
+
+<!-- CONTENT REGION -->

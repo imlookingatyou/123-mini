@@ -1,0 +1,745 @@
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2a0fad");
+@font-face {font-family: 'frutiger-roman'; src: url('../fonts/2A0FAD_0_0.eot');src: url('../fonts/2A0FAD_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2A0FAD_0_0.woff') format('woff'),url('../fonts/2A0FAD_0_0.ttf') format('truetype');}
+@font-face {font-family: 'frutiger-lightregular'; src: url('../fonts/2A0FAD_1_0.eot');src: url('../fonts/2A0FAD_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2A0FAD_1_0.woff') format('woff'),url('../fonts/2A0FAD_1_0.ttf') format('truetype');}
+@font-face {font-family: 'frutiger-boldregular'; src: url('../fonts/2A0FAD_2_0.eot');src: url('../fonts/2A0FAD_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2A0FAD_2_0.woff') format('woff'),url('../fonts/2A0FAD_2_0.ttf') format('truetype');}
+
+/* Styles for CSS */
+
+body, html {
+	width: 100%; 
+	height:100%;
+	margin: 0;
+	overflow: hidden;
+	-webkit-font-smoothing: antialiased;
+	min-width: 1024px; 
+	min-height: 685px;
+}
+
+.portrait { /* This div should only be seen in mobile view */
+	display: none;
+}
+
+.container {
+	width: 500%;
+	height:100%;
+	position: relative;
+	background: url(../images/sky-big.png) repeat-x;
+	background-size:292px 1600px;
+}
+
+h1 {
+	color: #f00;
+	font-family: frutiger-boldregular, Arial, Helvetica, sans-serif;
+	font-size: 7.5em;
+	line-height: 0.7em;
+	font-weight: normal;
+	margin: 0;
+	letter-spacing: -4px;
+	text-align: right;
+	position: relative;
+	margin: 0;
+}
+
+h2 {
+	color: #f00;
+	font-family: frutiger-boldregular, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 2.8em;
+	text-align: right;
+	position: relative;
+	margin: 0 0 1em 0;
+}
+
+p {
+	color: #3e3e3e;
+	font-family: frutiger-lightregular, Arial, Helvetica, sans-serif;
+	font-size: 1.3em;
+	text-align: right;
+	width: 76%;
+	padding-left: 24%;
+	position: relative;
+}
+
+p a {
+	color: #3e3e3e;
+	display: inline !important;
+}
+p.paragraphMobile, li.mobileP {
+	display: none;
+}
+
+/* Images */
+
+.grass {
+	width: 100%;
+	height:100%;
+	background: url(../images/grass.png) repeat-x bottom;
+	display: block;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+.tree {
+	position: absolute;
+	width: 42%;
+	max-width: 496px;
+}
+
+.tree img {
+	position: absolute;
+	width: 100%;
+}
+
+.one .tree {
+	bottom: 4%;
+	right: 10%;
+}
+.one .tree img {
+	bottom: 4%;
+	right: -53%;
+}
+.two .tree {
+	bottom: 4%;
+	right: 0;
+}
+.two .tree img {
+	z-index: 1;
+	bottom: 4%;
+	right: -45%;
+}
+.three .tree {
+	z-index: 2;
+	bottom: 5%;
+	left: 0;
+}
+.three .tree img {
+	bottom: 3%;
+	left: 65%;
+}
+.four .tree {
+	bottom: 4%;
+	left: 0;
+}
+.four .tree img {
+	bottom: 4%;
+	left: 85%;
+}
+.five .tree {
+	bottom: 4%;
+	right: -8%;
+}
+.five .tree img {
+	bottom: 4%;
+	left: 85%;
+	width: 80%;
+}
+
+
+.game { /* This will be used inside section to center elements */
+	width: 50%;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+	max-width: 700px;
+}
+
+.game a {
+	display: block;
+	text-decoration: none;
+	border: 0px;
+}
+
+.game a img {
+	width:100%;
+	position: absolute;
+	bottom: 4%;
+	left: 180%;
+	z-index: 3;
+	text-decoration: none;
+	border: 0px;
+}
+
+.calculator {
+	width: 50%;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+	max-width: 700px;
+}
+
+.calculator a {
+	display: block;
+	text-decoration: none;
+	border: 0px;
+}
+
+.calculator img {
+	width:100%;
+	position: absolute;
+	bottom: 4%;
+	left: 300%;
+	z-index: 4;
+	text-decoration: none;
+	border: 0px;
+}
+
+.boy {
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	max-width: 460px;
+	bottom: 0;
+	left: 0;
+}
+.boy img {
+	width: 100%;
+	position: absolute;
+	bottom: -8%;
+	left: -40%;
+}
+
+.sun {
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	top: -7%;
+	left: 100%;
+	max-width: 312px;
+}
+.sun img {
+	width: 100%;
+	position: absolute;
+}
+
+.bigbush {
+	width: 85%;
+	height: 100%;
+	position: absolute;
+	max-width: 700px;
+	bottom: 0;
+	left: 0;
+}
+
+.one .bigbush img {
+	width: 100%;
+	position: absolute;
+	bottom: 6%;
+	left: -45%;
+}
+
+.two .bigbush img {
+	position: absolute;
+	bottom: 5%;
+	left: 25%;
+}
+
+.three .bigbush img {
+	position: absolute;
+	bottom: 5%;
+	left: 100%;
+}
+
+.four .bigbush img {
+	position: absolute;
+	bottom: 5%;
+	left: 150%;
+}
+
+.five .bigbush img {
+	position: absolute;
+	bottom: 5%;
+	left: 150%;
+}
+
+.lamplinks {
+	width: 27%;
+	position: absolute;
+	bottom: 2%;
+	left: 62%;
+	max-width: 300px;
+	cursor: pointer;
+}
+.lamplinks img.gameLink {
+	width: 100%;
+	display: block;
+}
+.lamplinks img.calculatorLink {
+	width: 100%;
+	display: block;
+}
+.lamplinks img.demoLink {
+	width: 100%;
+	display: block;
+}
+.lamplinks img.videosLink {
+	width: 100%;
+	display: block;
+}
+
+.left {
+	width: 13%;
+	position: absolute;
+	bottom: 3%;
+	left: 1%;
+	max-width: 185px;
+	cursor: pointer;
+}
+.left img {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.right {
+	width: 13%;
+	position: absolute;
+	bottom: 4%;
+	right: 1%;
+	max-width: 185px;
+	cursor: pointer;
+}
+.right img {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.two .right {
+	z-index: 15;
+}
+
+.two .left {
+	z-index: 16;
+}
+
+.three .right {
+	z-index: 17;
+}
+
+.three .left {
+	z-index: 18;
+}
+
+.four .left {
+	z-index: 19;
+}
+
+.box {	
+	/* Set up proportionate scaling */
+	position: relative;
+	width: 20%;
+	height: 100%;
+	float: left;
+	opacity: 1;
+	overflow: visible;
+}
+
+.center-box { 
+	/* This will be used inside section to center elements */
+	background: none;
+	width: 44%;
+	height: 34%;
+	position: relative;
+	top: 13%;
+	left: -14%;
+	margin: 0 auto;
+	max-width: 600px;
+	display: none;
+	z-index: 20;
+}
+
+.center-box a {
+	display: block;
+}
+
+.center-box a img {
+	width:100%;
+}
+.center-box p img.mainTitle {
+	max-width:100%;
+}
+
+/* section 4 video */
+.four .video {
+	width: 50%;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+	max-width: 700px;
+}
+.four .video div.video1 img {
+	width:100%;
+	float: left;
+	z-index: 5;
+}
+
+.four .video div.video1 {
+	position: absolute;
+	bottom: 10px;
+	left: 180%;
+	z-index: 6;
+}
+
+.four .video div.video1 div.video2 {
+	height: 420px;
+	width: 100%;
+	float: left;
+}
+
+.four .video div.video1 div.video2 div {
+	width:91.33%;
+	height: 100%;
+	background-color: #000000;
+	float: left;
+	min-height: 150px;
+}
+
+.four .video div.video2 img.board_left, 
+.four .video div.video2 img.board_right {
+	width:4.335%;
+	height: 100%;
+	max-height: 420px;
+	min-height: 150px;
+}
+.four .video div.video2 img.board_right {
+	float: right !important;
+}
+.four .video div.video2 img.board_right {
+	text-align: right;
+}
+
+.four .video iframe {
+	width: 100%;
+	height: 100%;
+	max-height: 420px;
+	min-height: 150px;
+	z-index: 7;
+	background: #000000;
+	display: block;
+}
+
+.four .video img.ie8_fallback {
+	width:100%;
+	position: absolute;
+	bottom: 4%;
+	left: 0%;
+	text-decoration: none;
+	border: 0px;
+}
+
+/* section 5 videos */
+.five .videos {
+	width: 760px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 20;
+	height: 100%;
+
+}
+.five .videos ul{
+	position: absolute;
+	bottom: 10px;
+	-webkit-padding-start: 0px !important;
+	-webkit-margin-before: 0em !important;
+	-webkit-margin-after: 0em !important;
+}
+.five .videos ul li {
+	list-style: none;
+	margin: 0 10px;
+	width: 340px;
+	float: left;
+}
+.five .videos ul li img {
+	cursor: pointer;
+	width: 100%;
+}
+.five .videos ul li h2 {
+	margin: 0 0 10px 5px;
+	color: #ff0000;
+	font-size: 28px;
+	text-align: left;
+	font-family: frutiger-boldregular, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+.five .videos ul li h3 {
+	margin: 0 0 10px 5px;
+	color: #ff0000;
+	font-size: 22px;
+	font-family: frutiger-boldregular, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+.five .videos ul li p {
+	text-align: left;
+	padding: 0;
+	width: 100%;
+	font-size: 18px;
+	-webkit-margin-before: 0em !important;
+	-webkit-margin-after: 0em !important;
+	-webkit-margin-start: 0px !important;
+	-webkit-margin-end: 0px !important;
+} 
+.cloud {
+	width: 651px;
+	height: 386px;
+	position: absolute;
+	bottom: 350px;
+	left: -200px;
+}
+.five li.desktopP h2,
+.five li.desktopP p {
+	padding: 0 0 0 10px !important;
+	margin: 0 0 10px 0 !important;
+}
+.five li.mobileP {
+		font-size: 8px;
+}
+.five li.mobileP h2 {
+	font-size: 15px;
+	line-height: 17px;
+}
+#playerOverlay {
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+	z-index: 21;
+	background: url(../images/overlay.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#closeBtnContainer {
+	position: relative;
+	width: 100%;
+	max-width: 911px;
+	margin: 0 auto;
+}
+#closeBtn {
+	margin: 0 auto;
+	background: url(../images/closebtn.png) no-repeat;
+	background-position: center;
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	cursor: pointer;
+}
+
+#playerContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -235px 0 0 -350px;
+	text-align: center;
+	background: url(../images/videoContainer_background.jpg) no-repeat;
+	background-size: 100%;
+	background-position: top center;
+	width: 700px;
+	height: 470px;
+}
+
+#player {
+	width: 96%;
+	height: 94%;
+	margin: 2% auto;
+	background: #000;
+}
+
+@media (max-device-width : 604px) {
+
+	.center-box {
+		width: 86%;
+	}
+
+	h1 {
+		font-size: 10em;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+}
+
+@media
+only screen and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (max-device-width: 768px) and (orientation : portrait) and (min-device-pixel-ratio : 1.5),
+only screen and (max-device-width: 1080px) and (orientation : portrait) and (min-device-pixel-ratio : 2)
+ {
+
+	html, body {
+		min-width: 0px; 
+		min-height: 0px;
+	}
+
+	body {
+		background: url(../images/rotate-bg.jpg) no-repeat;
+		background-size: cover;
+	}	
+
+	.container {
+		background: none;
+	}
+
+	.box, .grass {
+		display: none;
+	}
+
+	.portrait {
+		display: block;
+		width: 100%;
+	}
+
+	#phoneicon {
+		width: 100%;
+		height: 35%;
+		background: url(../images/rotate-icon.png) no-repeat;
+		position: absolute;
+		top: 26%;
+		left: 0%;
+		background-size: 30%;
+		background-position: center top;
+		margin: 0 auto;
+	}
+
+	#phonecloud {
+		width: 100%;
+		height: 33%;
+		background: url(../images/rotate-cloud.png) no-repeat;
+		position: absolute;
+		bottom: 23%;
+		background-size: 50%;
+		background-position: center top;
+		margin: 0 auto;
+	}
+
+	#phonecloud p {
+		z-index: 22;
+		color: #000;
+		text-align: center;
+		width: 100%;
+		font-size: 1em;
+		padding: 30% 0 0 0;
+	}
+
+	.game {
+		max-width: 290px;
+	}
+	.calculator {
+		max-width: 290px;
+	}
+	.video {
+		max-width: 290px;
+	}
+	.tree {
+		max-width: 170px;
+	}
+
+	#playerOverlay {
+		top: -10000px;
+	}
+
+}
+
+@media only screen and (max-device-width: 736px) {
+	p.paragraphDesktop, li.desktopP {
+		display: none;
+	}
+	p.paragraphMobile, li.mobileP {
+		display: block;
+	}
+	.five .videos {
+		min-width: 100px;
+	}
+	div.videoThumb {
+		bottom: -4%;
+	}
+	.five .videos .videoUp {
+		right: 3%;
+		bottom: 38%;
+	}
+	.four .video div.video1 div.video2 {
+		height: 100%;
+		max-height: 174px;
+		min-height: 150px;
+		width: 100%;
+		float: left;
+	}
+
+	
+
+	#playerContainer {
+		top: 20%;
+		left: 25%;
+		width: 50%;
+		height: 60%;
+		margin: 0;
+	}
+	#player {
+		width: 96%;
+		height: 93%;
+		margin: 2% auto;
+		background: #000;
+	}
+	.five .videos {
+	width: 340px;
+	}
+	.five .videos ul{
+		bottom: 2px;
+	}
+	.five .videos ul li {
+		margin: 0 5px;
+		width: 160px;
+	}
+	.five .videos ul li img {
+		width: 100%;
+	}
+	.five .videos ul li h3 {
+		margin: 0 0 5px 2px;
+		font-size: 10px;
+	}
+	.five .videos ul li h2 {
+		margin: 0 0 5px 0px;
+		font-size: 15px;
+		line-height: 17px;
+	}
+	.five .videos ul li p {
+		font-size: 12px;
+	}
+	.cloud {
+		width: 304px;
+		height: 171px;
+		bottom: 170px;
+		left: -100px;
+	}
+	.cloud img {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-device-height: 400px) {
+	p.paragraphDesktop, li.desktopP {
+			display: none;
+	}
+	p.paragraphMobile, li.mobileP {
+		display: block;
+	}
+	.five .videos {
+		min-width: 100px;
+	}
+}
+
+@media only screen and (max-device-height: 450px) {
+	.video div.video1 div.video2 {
+		max-height: 190px;
+		min-height: 100px;
+	}
+	.five .videos {
+		min-width: 100px;
+	}
+}
+
+

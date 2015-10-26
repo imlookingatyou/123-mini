@@ -1,0 +1,22 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$data = $_POST;
+	
+	$game = new Game();
+	if(isset($_SESSION['user'])) {
+		$user = $_SESSION['user'];	
+	} else {
+		echo json_encode(array('success' => 0, 'reason' => 'You must be logged in to equip items'));
+		exit;
+	}
+	
+	$result = $game->equipItem($user['id'], $data['accessory']);
+	if(!$result) {
+		echo json_encode(array('success' => 0));
+	} else {
+		$_SESSION['user']['accessories'] = $data['accessory'];
+		echo json_encode(array('success' => 1));
+	}
+?>

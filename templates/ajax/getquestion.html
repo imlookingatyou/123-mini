@@ -1,0 +1,17 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$data = $_POST;
+	
+	$calc = new Calculator();
+
+	$user = $calc->getSecretQuestion($data['username']);
+	if(!$user) {
+		echo json_encode(array('success' => 0));
+	} else {
+		$_SESSION['id'] = $user['id'];
+		$_SESSION['answer'] = $user['answer'];
+		echo json_encode(array('success' => 1, 'question' => $user['secret_question']));
+	}
+?>

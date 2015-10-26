@@ -1,0 +1,151 @@
+<?php	
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$user = array();
+	if(isset($_SESSION['user'])) {
+		$user = $_SESSION['user'];
+	} else {
+		$user = array('id' => 0);
+	}
+	
+	$calc = new Calculator();
+	$accessories = $calc->getAccessories($user['id']);
+?>
+<div id="character" class="data page billboard">
+	<div id='billboard'>
+		<form id="character-creation" method="post" action="/ajax/character">
+		<div class='grid2col'>
+			<div class="column">
+				<h1>Your Mini Me</h1>
+				<h2>Create your Mini Me, who’ll help you save towards your goals.</h2>
+					<div id="fields">
+						<p id='char-instruction'>To change parts of your Mini Me, click the markers.</p>
+						<div class="field">
+							<label for="gender">Are you a boy or a girl?</label>
+							<br />
+							<br />
+							<?php
+								if((isset($user['gender']) && $user['gender'] == 0) || $user['id'] == 0) {
+									echo '<input type="radio" name="gender" value="0" data-type="radio" checked="checked"/><span class="option">Boy</span>';
+									echo '<input type="radio" name="gender" value="1" data-type="radio" /><span class="option">Girl</span>';
+								} else {
+									echo '<input type="radio" name="gender" value="0" data-type="radio" /><span class="option">Boy</span>';
+									echo '<input type="radio" name="gender" value="1" data-type="radio" checked="checked" /><span class="option">Girl</span>';
+								}
+							?>
+						</div>
+						<div id="accessories" class="field">
+							<label>Add some extras.</label>
+							<div class="grid3col">
+								<div class="column first">
+									<?php
+										if(count($accessories) > 5) {
+											echo '<a href="#" id="acc-prev" class="no-ajaxy"><img src="/img/character/prev-arrow.png" alt="Previous" /></a>';
+										}
+									?>
+								</div>
+								<div id="icons" class="column">
+									<div id="iconContainer">
+									<?php
+										foreach($accessories as $acc) {
+											$checked = "";
+											if(isset($user['accessories']) && $user['accessories'] == $acc['id']) {
+												$checked = " checked='checked'";
+											}
+											echo '<input type="radio" name="accessories" value="'.$acc['id'].'" id="accessory-'.$acc['id'].'" data-type="radio"'.$checked.' data-accType="'.$acc['accessoryType'].'" /><label for="accessory-'.$acc['id'].'"><img src="/img/character/accessories/'.$acc['filename'].'-small.png" alt="Accessory '.$acc['id'].'" /></label>';
+										}
+									?>
+									</div>
+								</div>
+								<div class="column last">
+									<?php
+										if(count($accessories) > 5) {
+											echo '<a href="#" id="acc-next" class="no-ajaxy"><img src="/img/character/next-arrow.png" alt="Next" /></a>';
+										}
+									?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column last">
+						<div class='character' class="attr" data-attr="skin" data-value='1'>
+							<div class='char-top-wrapper'>
+								<div class='fixed-char-top'>
+									<div class='hair attr' data-attr="hair" data-value='1'>
+										<div class='hair-front'></div>
+										<div id='hairhotspot' class='hotspot'></div>
+									</div>
+									<div class='accessory'></div>
+									<div class='ear ear-left'></div>	
+									<div class='head head-skin-1 attr' data-attr="head" data-value='1'>
+										<div class='eyebrows eyebrow-left'></div>
+										<div class="eye"></div>
+										<div class='nose'></div>
+										<div class='eyebrows eyebrow-right'></div>
+										<div class="eye"></div>
+										<div class='mouth'></div>
+										<div id='headhotspot' class='hotspot'></div>
+									</div>
+									<div class='hair-back'></div>
+									<div class='ear ear-right'></div>
+									<div class='neck'></div>
+									<div class='shirt'>
+										<div class='shirt-top'></div>
+										<div class='shirt-bottom'>
+											<div class='shirt-logo'></div>
+										</div>
+										
+									</div>
+
+								</div>
+
+							</div>
+								<div class='arm arm-left'></div>
+								<div class='hand hand-left'></div>
+								<div class='arm arm-right'></div>
+								<div class='hand hand-right'></div>	
+							<div class='char-bottom'>
+								<div class="legs attr" data-attr="bottom" data-value='1'>
+									<div class='legs-top trouser-top-1 legs-top-1'></div>
+									<div class='leg-left'>
+										<div class='trouser-1'></div>
+									</div>
+									<div class='leg-right'>
+										<div class='trouser-1'></div>
+									</div>
+									<div id='bottomhotspot' class='hotspot'></div>
+								</div>
+								<div class='shoes attr' data-attr='shoes' data-value='1'>
+									<div class='shoes-left'></div>
+									<div class='shoes-right'></div>
+									<div id='shoeshotspot' class='hotspot'></div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+			
+			<div id="buttons">
+				<div id='backbutton' class='back-button'>
+					<?php
+						if(isset($_SESSION['user'])) {
+							echo "<a href='/menu'><img src='/img/back-arrow.png'/><p>Back</p></a>";
+						} else {
+							echo "<a href='javascript:window.history.back()'><img src='/img/back-arrow.png'/><p>Back</p></a>";
+						}
+					?>
+				</div>
+				<div id='nextbutton' class='normalbutton inversebuttoncolors'>
+					<input type="submit" value="Next bit" id="submit" name="submit" />
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div id='bgextras'>
+		<div id='billboardbush' class='bgelement'></div>
+		<div id='tree' class='bgelement'></div>
+	</div>
+</div>

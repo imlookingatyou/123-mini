@@ -1,0 +1,447 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+?>
+<!-- Two wrappers needed to stop CSS globally declaring text-align:center;  -->
+<div id='calculator-body'>
+	<div id='calculator-wrapper'>
+		<div id='calculator' class='page'>
+			<div id='machine'>			
+				<!-- div id='machine-sliders' -->
+				<div id='sliders-container'>
+
+					<div id='slider-help-panel'>
+						<p></p>
+					</div>
+
+					<div id='allsliders'>
+						<div class="grid2col firstcol sliderrow">
+							<div class="column">
+								<div id='helpbutton1' class='slider-hint-button slider-hint-button-deselected' >
+									<a href="#" class='no-ajaxy help' data-help="1">Savings</a>
+								</div>
+							</div>
+							<div class="column last">
+								<div class='slider-container grid3col'>
+									<div class="column button">
+										<a href="#" class="no-ajaxy" data-value="-" data-slider="savings"><img src="/img/calculator/minus.png" alt="Minus" /></a>
+									</div>
+									<div class="column real-slider-container">
+										<div id='slidersavings' class="slider" data-min="0" data-max="2000" data-step="10" data-name="savings"></div>
+										<span class="numberpound">£</span>
+										<input type="number" name="textsavings" id="textsavings" class="inputbox" data-name="savings" step="10" min="0" max="2000" value="0" />
+									</div>
+									<div class="column button">
+										<a href="#" class="no-ajaxy" data-value="+" data-slider="savings"><img src="/img/calculator/plus.png" alt="Plus" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid2col sliderrow">
+							<div class="column">
+								<div id='helpbutton2' class='slider-hint-button slider-hint-button-deselected' >
+									<a href='#' class="no-ajaxy help" data-help="2">Weekly</a>
+								</div>
+							</div>
+							<div class="column last">
+								<div class='slider-container grid3col'>
+									<div class="column button">
+										<a href="#" class="no-ajaxy" data-value="-" data-slider="weekly"><img src="/img/calculator/minus.png" alt="Minus" /></a>
+									</div>
+									<div class="column real-slider-container">
+										<div id='sliderweekly' class="slider" data-min="0" data-max="20" data-step="0.50" data-name="weekly"></div>
+										<span class="numberpound">£</span>
+										<input type="number" name="textweekly" id="textweekly" class="inputbox" data-name="weekly" step="0.5" min="0" max="20" value="0" />
+									</div>
+									<div class="column button">
+										<a href="#" class="no-ajaxy" data-value="+" data-slider="weekly"><img src="/img/calculator/plus.png" alt="Plus" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid2col sliderrow">
+							<div class="column">
+								<div id='helpbutton3' class='slider-hint-button slider-hint-button-deselected' >
+									<a href='#' class="no-ajaxy help" data-help="3">Monthly</a>
+								</div>
+							</div>
+							<div class="column last">
+								<div class='slider-container grid3col'>
+									<div class="column button">
+										<a href="#" class="no-ajaxy" data-value="-" data-slider="monthly"><img src="/img/calculator/minus.png" alt="Minus" /></a>
+									</div>
+									<div class="column real-slider-container">
+										<div id='slidermonthly' class="slider" data-min="0" data-max="80" data-step="1" data-name="monthly"></div>
+										<span class="numberpound">£</span>
+										<input type="number" name="textmonthly" id="textmonthly" class="inputbox" data-name="monthly" step="1" min="0" max="80" value="0" />
+									</div>
+									<div class="column button">
+										<a href="#" class="no-ajaxy" data-value="+" data-slider="monthly"><img src="/img/calculator/plus.png" alt="Plus" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid2col sliderrow">
+							<div class="column">
+								<div id='helpbutton4' class='slider-hint-button slider-hint-button-deselected' >
+									<a href='#' class="no-ajaxy help" data-help="4">Yearly</a>
+								</div>
+							</div>
+							<div class="column last">
+								<div class='slider-container grid3col'>
+									<div class="column button">
+										<a href="#" class="no-ajaxy" data-value="-" data-slider="yearly"><img src="/img/calculator/minus.png" alt="Minus" /></a>
+									</div>
+									<div class="column real-slider-container">
+										<div id='slideryearly' class="slider" data-min="0" data-max="1000" data-step="5" data-name="yearly"></div>
+										<span class="numberpound">£</span>
+										<input type="number" name="textyearly" id="textyearly" class="inputbox" data-name="yearly" step="5" min="0" max="1000" value="0" />
+									</div>
+									<div class="column button">
+										<a href="#" class="no-ajaxy" data-value="+" data-slider="yearly"><img src="/img/calculator/plus.png" alt="Plus" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- this one sits here as it needs to be on top of the sliders, and the panel needs to be behind -->
+					<a href="#" id="sliderHintsClose" class="no-ajaxy sliderhintclosebutton"><img src="/img/glossary/close.png" alt="Close Hint" /></a>
+					
+				</div>
+
+				<!-- div id='machine-tank' -->
+				<div id='machine-tank'>
+					<div id='machine-tank-middle'>
+						<div id='red-coins' class='tankcoins'></div>
+						<div id='gold-coins' class='tankcoins'></div>
+					</div>
+					<div id='machine-tank-cover'>
+						<div class="goal-line" id="goal-line-1"></div>
+						<div class="goal-line" id="goal-line-2"></div>
+						<div class="goal-line" id="goal-line-3"></div>
+					</div>
+				</div>
+				
+				<div id='machine-goals'>
+					<div id='goal3' class='goal'></div>
+					<div id='goal2' class='goal'></div>
+					<div id='goal1' class='goal'></div>
+				</div>
+
+				<div id='middle-cog'></div>
+				<!-- keeping interest behind the machine base so it gets textured -->
+				<div id='interest-container'>
+					<div id='interest-label'>
+						<p>Interest earned</p>
+					</div>
+					<div id='interest-figures'>
+						<!-- div id='interest-selector'></div -->
+						<div id='interest-rates'><span id='perc'>0%</span></div>
+						<!-- div id='interest-rates'><span id='perc1'>1%</span><span id='perc2'>2%</span><span id='perc3'>3%</span></div -->
+						<div id='total-interest'><span id='total'>£9999.99</span></div>
+					</div>
+				</div>
+				<div id='right-cog'></div>
+				<div id='machine-base'>
+					<div id='total-container' class="grid3col">
+						<div class='column first'>
+							<div id='total-label' class='total-element'><p>£<span>0</span></p></div>
+							<div id='total-title' class='total-element'><p>Grand total</p></div>
+						</div>
+						<div class="column middle">
+							<div id='byage' class='total-element'><p>in</p></div>
+						</div>
+						<div class="column last">
+							<div id='top-age-container'>
+								<div id='age' class='total-element'><p>17</p></div>
+								<div id='age-fraction' class='total-element'><p>&frac34;</p></div>
+							</div>
+							<div id='years' class='total-element'><p>Years</p></div>
+						</div>
+					</div>
+				</div>
+				
+				<div id='side-buttons'>
+					<div id='button-menu' class='side-button'><a href='/menu'></a></div> 
+					<div id='button-tips' class='side-button'><a href='#' class="no-ajaxy"></a></div>
+					<div id='button-help' class='side-button'><a href='#' class="no-ajaxy"></a></div>
+				</div>
+				
+			</div>
+
+			<div id='tape-measure'>
+				<div id="tapeContainer">
+					<div id="tape" data-container="#tape"></div>
+					<div id="tape-drag"></div>
+				</div>
+				<div id='tape-holder'>
+					<!-- div id='tape-holder-cog'></div -->
+					<div id='tape-holder-cover'>
+						<div id='agecontainer'>
+							<div id='tape-age-title'><p>age</p></div>
+							<div id='tape-age-container'>
+								<span id='tape-age'>17</span>
+								<span id='tape-age-fraction'>&frac34;</span>
+							</div>
+						</div>
+					</div>
+					<div id='plus-minus'>
+						<div id='plus-sign'></div>
+						<div id='minus-sign'></div>
+					</div>
+				</div>
+			</div>
+
+			<div class='character' class="attr" data-attr="skin" data-value='1'>
+				<div class='char-top-wrapper'>
+					<div id="character-top" class='char-top' data-container=".char-top-wrapper">
+						<div class='hair attr' data-attr="hair" data-value='1'>
+							<div class='hair-front'></div>
+							
+						</div>
+						
+						<div class="accessory"></div>
+						<div class='ear ear-left'></div>	
+						<div class='head head-skin-1 attr' data-attr="head" data-value='1'>
+							<div class='eyebrows eyebrow-left'></div>
+							<div class="eye"></div>
+							<div class='nose'></div>
+							<div class='eyebrows eyebrow-right'></div>
+							<div class="eye"></div>
+							<div class='mouth'></div>
+						</div>
+						<div class='hair-back'></div>
+						<div class='ear ear-right'></div>
+						<div class='neck'></div>
+						<div class='shirt'>
+							<div class='shirt-top'></div>
+							<div class='shirt-bottom'>
+								<div class='shirt-logo'></div>
+							</div>
+							
+						</div>
+
+					</div>
+
+				</div>
+					<div class='arm arm-left'></div>
+					<div class='hand hand-left'></div>
+					<div class='arm arm-right'></div>
+					<div class='hand hand-right'></div>	
+					<div class='char-bottom'>
+						<div class="legs attr" data-attr="bottom" data-value='1'>
+							<div class='legs-top trouser-top-1 legs-top-1'></div>
+							<div class='leg-left'>
+								<div class='trouser-1'></div>
+							</div>
+							<div class='leg-right'>
+								<div class='trouser-1'></div>
+							</div>
+						</div>
+						<div class='shoes attr' data-attr='shoes' data-value='1'>
+							<div class='shoes-left'></div>
+							<div class='shoes-right'></div>
+						</div>
+					</div>
+			</div>
+			<div id="play-sign">
+				<a href="#" id="close-play-sign" class="no-ajaxy"><img src="/img/prompt-close.png" alt="Close" /></a>
+				<a href="/game/"><img src="/img/calculator/play-game-sign.png" alt="Play Mini Jets Game" /></a>
+			</div>
+			
+		</div>
+	</div>
+	<div id='bgextras'>
+		<div id='bush' class='bgelement'></div>
+		<div id='bush2' class='bgelement'></div>
+		<div id='sun'></div>
+	</div>
+</div>
+
+		<div id="glossary">
+			<div id="glossary-heading">
+				<a href="/glossary" id="glossaryClose" class="no-ajaxy"><img src="/img/glossary/close.png" alt="Close Glossary" /></a>
+				<h3>Tips and Info</h3>
+			</div>
+			<div id="glossary-terms">
+				<div id="tips" class="item">
+					<img src="/img/glossary/icontip.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Savings a little slow?</h4></a>
+					</div>
+					<div class="description">
+						<p>Why not help your mum wash the dishes for a few extra pennies?</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Balance</h4></a>
+					</div>
+					<div class="description">
+						<p>The amount of money you have in your savings account.</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Bank</h4></a>
+					</div>
+					<div class="description">
+						<p>A place where your savings can be kept safe.</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Bank account</h4></a>
+					</div>
+					<div class="description">
+						<p>Where you can keep your money instead of carrying it all in your pockets!</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Budget</h4></a>
+					</div>
+					<div class="description">
+						<p>To work out how much you should spend each day, week or month, so you can be sure you’re not spending more money than you have.</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Debit Card</h4></a>
+					</div>
+					<div class="description">
+						<p>A card you can use in shops, online or over the phone to pay for things. It also lets you take money from your account at cash machines – like a key to your safe.</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Cash Card</h4></a>
+					</div>
+					<div class="description">
+						<p>A card you use to take money from your account through going to cash machines – like a key to your safe.</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Interest</h4></a>
+					</div>
+					<div class="description">
+						<p>The reward you get for saving money with a bank. It’s also something you pay when you borrow money from a bank.</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Savings</h4></a>
+					</div>
+					<div class="description">
+						<p>The money you keep to one side for things you want in the future.</p>
+					</div>
+				</div>
+				<div class="item last">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Savings Account</h4></a>
+					</div>
+					<div class="description">
+						<p>Like a money box or a coin jar. Just bigger and safer!</p>
+					</div>
+				</div>
+				<div class="item last">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Earnings </h4></a>
+					</div>
+					<div class="description">
+						<p>Money that you get paid for work that you do.</p>
+					</div>
+				</div>
+				<div class="item last">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Expenditure or spending</h4></a>
+					</div>
+					<div class="description">
+						<p>The amount of money you use to buy things.</p>
+					</div>
+				</div>
+				<div class="item last">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Income</h4></a>
+					</div>
+					<div class="description">
+						<p>Any money you receive from working, or given to you by friends or family.</p>
+					</div>
+				</div>
+				<div class="item last">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Deposit</h4></a>
+					</div>
+					<div class="description">
+						<p>Money that you put into a bank account.</p>
+					</div>
+				</div>
+				<div class="item last">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Withdrawal</h4></a>
+					</div>
+					<div class="description">
+						<p>Money that you take out of a bank account.</p>
+					</div>
+				</div>
+				<div class="item last">
+					<img src="/img/glossary/icon.png" alt="Icon" class="icon" />
+					<div class="title">
+						<img src="/img/glossary/chevron.png" alt="View Glossary item" class="chevron" />
+						<a href="#" class='no-ajaxy'><h4>Statement</h4></a>
+					</div>
+					<div class="description">
+						<p>Information your bank sends you by post or by email, showing what’s gone in and out of your bank account.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<div id="help">
+		<div class="background"></div>
+		<div id="help-content">
+			<a href="#" id="close-help" class="no-ajaxy"><img src="/img/glossary/close.png" alt="Close Help" /></a>
+			<h2>Getting Started.</h2>
+			<ol>
+				<li class="one">Hello! To start, slide the red circles to set your savings. You can also put in the money you make weekly, monthly and yearly. For more help, click the rectangular buttons.</li>
+				<li class="two">See how much you’ll save as you get older, by lifting the tape measure and growing your Mini Me. When your goal badge lights up, it means you’ve reached your goal.</li>
+				<li class="three">Click on the light bulb for top tips on money and saving.</li>
+			</ol>
+		</div>
+	</div>
+
+	<div id='disclaimercontainer'><p>For illustrative purposes only</p></div>
+	
+</div>

@@ -1,0 +1,22 @@
+<?php
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$data = $_POST;
+	if(isset($data['ajax'])) {
+		$_SESSION['ajax'] = true;
+	} else {
+		$_SESSION['ajax'] = false;
+	}
+	
+	$calc = new Calculator();
+
+	$user = $calc->userCheck($data['username']);
+
+	if(!$user) {
+		echo json_encode(array('success' => 1));
+	} else {
+		echo json_encode(array('success' => 0, 'error' => 'Username already exists'));
+	}
+	exit;
+?>

@@ -1,0 +1,101 @@
+<?php
+require_once("../lib/init.php");
+
+//init site obj
+$site = new Site_Specific();
+
+//define variables
+$reglang = DEFAULT_LANG;
+$pageId = false;
+$runInterface = true;
+$interfaceParams = false;
+
+//determine page identifiers
+//first bit is for iis
+if ( isset( $_SERVER[ 'HTTP_X_REWRITE_URL' ] ) ) {
+	$_SERVER[ 'REQUEST_URI' ] = $_SERVER['HTTP_X_REWRITE_URL' ];
+}
+$uri = empty($_SERVER['REQUEST_URI']) ? false : $_SERVER['REQUEST_URI'];
+	
+if($uri){
+	$uriArr = explode("/",$uri);
+	
+	//check whether we're on the homepage
+	if( empty($uriArr[1]) ){
+		$pageId = "domain-home";
+	}else{
+		//if reglang is in uri, separate from pageId
+		if( Config::get_mandatory("LOCAL_DOMAINS") ){
+			$uriArr = array_splice($uriArr, 1);			
+		}else{
+			//define reglang
+			$reglang = $uriArr[1];
+			$uriArr = array_splice($uriArr, 2);
+		}
+	}
+}else{
+	//return 404
+	$site->fnf();
+	exit;	
+}
+
+//check reglang value is valid
+$reglangParams = $site->getReglangParams($reglang);
+
+if( !$reglangParams ){
+	//return 404
+	$site->fnf();
+	exit;
+}
+
+$pageId = implode("/", $uriArr);
+
+//odd bug where pageId? will still get processed, so remove the ?
+$checkforQ = strrev($pageId);
+if ($checkforQ[0]=='?') {
+	$pageId = substr($pageId,0,-1);
+}
+
+//remove query string from page identifier
+if( !empty($_SERVER['QUERY_STRING']) ){
+	$qsPos = strpos($pageId, $_SERVER['QUERY_STRING']);	
+	$pageId = substr($pageId, 0, $qsPos-1);
+}
+
+
+//if we still have no pageId, set to default.
+$pageId = ( !$pageId || $pageId=="/")? "home":$pageId;
+$reglangParams["url"] = $pageId;
+
+/**** CHECK CACHE ****/
+if( $cacheData = Cache::checkCache($reglang, "interface", $pageId) ){
+	$runInterface = false;
+	$interfaceParams = $cacheData;
+}
+
+//send reglang and pageId off to interface layer
+if( $runInterface ){
+	$interfaceParams = $site->getPageParams($pageId, $reglang);
+}
+
+if($interfaceParams) {
+	//if required, add to cache
+	if( empty($interfaceParams['nocache']) && empty($cacheData) ){
+		$addtocache = Cache::checkCache($reglang, "interface", $pageId, $interfaceParams);
+	}
+
+	//merge $interfaceParams with $reglangParams
+	if( count($interfaceParams) > 0 ){	
+		$pageParams = array_merge( (array)$reglangParams,  (array)$interfaceParams);
+	}else{
+		$pageParams = (array)$reglangParams;
+	}
+
+	echo $site->debugMode($pageParams);
+	echo $site->buildPage($pageParams);
+
+}else{
+	//return 404
+	$site->fnf();
+	exit;
+}

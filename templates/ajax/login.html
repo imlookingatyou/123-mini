@@ -1,0 +1,20 @@
+<?php
+	
+$ajax = false;
+$data = $_POST;
+$calc = new Calculator();
+
+$user = $calc->login($data);
+
+if(isset($user['error'])) {
+	echo json_encode(array('success' => 0, 'error' => $user['error']));
+} else {
+	$lifetime=600;
+	session_start();
+	setcookie(session_name(),session_id(),time()+$lifetime);
+	$_SESSION['loggedin'] = true;
+	$_SESSION['user'] = $user;
+	echo json_encode(array('success' => 1, 'data' => $user));
+}
+
+?>
